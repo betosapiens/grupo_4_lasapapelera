@@ -1,18 +1,21 @@
-const express = require('express');
-const path = require('path');
-
-const app = express();
-
-app.listen(3000, () => {
+const express=require("express")
+const app=express()
+const path=require("path")
 
 
-    console.log('servidor iniciado');
-    
-});
+const publicPath = path.resolve(__dirname, "./public");
+app.use(express.static(publicPath));
 
-app.get('/', (req, res) => {
+app.get('/register', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, "./views/register.html"));
+  });
+  app.get('/login', (req, res)=>{
+    res.sendFile(path.resolve(__dirname, "./views/login.html"));
+  });
 
 
-    res.sendFile(path.join(__dirname,'./views/index.html'));
-
-})
+app.listen(3009,()=>
+console.log("Servidor andando")
+)
+app.get('/', (req, res)=>{
+res.send("Formularios")})
