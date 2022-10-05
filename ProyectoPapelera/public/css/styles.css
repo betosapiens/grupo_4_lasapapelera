@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: white;
+}
+
+.logo-iconos {
+  display: flex;
+  text-decoration: none;
+}
+
+.logo {
+  background-color: black;
+  width: 50%;
+}
+
+p,
+h1 {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin-left: -10%;
+}
+
+.iconos {
+  width: 40%;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.main-article {
+  width: 100%;
+  margin-bottom: 5px;
+  border-top: solid 2px;
+}
+
+.login-icono {
+  font-size: 40px;
+}
+
+.login-cart {
+  font-size: 30px;
+  color: black;
+}
+
+.banner {
+  width: 100%;
+  height: 400px;
+}
+
+body {
+  background-color: rgba(231, 225, 225, 0.799);
+}
+.productos {
+  margin: 15px;
+  padding: 50px;
+}
+
+.articulos {
+  width: 80vw;
+  margin: auto;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.imagenes {
+  width: 400px;
+  border-radius: 30px;
+}
+
+.titulares {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+}
+
+.precios {
+  font-size: 18px;
+}
+
+.descuentos {
+  font-size: 16px;
+}
+
+.descripciones {
+  font-size: 16px;
+}
+
+#burguer {
+  font-size: 35px;
+}
+
+footer {
+  background: #000128;
+  color: white;
+}
+
+.titulos-footer {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.descripciones-footer {
+  font-size: 12px;
+  text-align: center;
+}
