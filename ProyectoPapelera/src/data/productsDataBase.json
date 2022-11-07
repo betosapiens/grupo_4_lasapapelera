@@ -1,0 +1,32 @@
+[
+    {
+        "name":"Bolsas",
+        "description":"description",
+        "price":500.00,
+        "image": "bolsas.jpeg",
+        "id":1
+    },
+    
+    {
+        "name":"Cartoneria",
+        "description":"description",
+        "price":47.00,
+        "image": "cartoneria.jpg",
+        "id":2
+    },
+    {
+        "name":"Papeles",
+        "description":"description",
+        "price":27.5,
+        "image": "papeles.jpeg",
+        "id":3
+    },
+    {       
+        "name":"Servilletas",
+        "description":"description",
+        "price":37.50,
+        "image": "servilletas.jpeg",
+        "id":4
+    }
+    
+    ]

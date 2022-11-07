@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
+  <%- include('./partials/head') %>
+  
+  <%- include('./partials/headerNoBanner') %>
+
+
+    <main>
+        <article>
+            <div class="container-CenterImage">
+                <img src="/images/<%= product.image %> " alt="<% product.name %> ">
+            </div>
+            <div class="container-bottomImages">
+                <img src="/images/<%= product.image %>" alt="<% product.name %>">
+                <img src="/images/<%= product.image %>" alt="<% product.name %>">
+                <img src="/images/<%= product.image %>" alt="<% product.name %>">
+            </div>
+            <div class="description-article">
+                <h2>name </h2>
+                <p>description </p>
+                
+                <p>price</p>
+                
+                <div class="productForm">
+                        
+                        <div class="container">
+                            <div class="button">
+                                <button id="decrement" onclick="stepper(this)"> - </button>
+                            </div>                            
+                                <input type="number" min="0" max="100" step="1" value="0" id="my-input" readonly>
+                            
+                            <div class="button">                                 
+                                <button id="increment" onclick="stepper(this)"> + </button>
+                            </div>
+                        </div>
+
+                        <button type="button">Añadir al carrito</button>
+                </div>
+                
+
+            </div>
+        </article>
+    </main>
+
+ <%- include('./partials/footer') %>
+    
+</body>
+</html>

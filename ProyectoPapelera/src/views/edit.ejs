@@ -16,46 +16,32 @@
 </head>
 <body>
     <header>
-        <div class="logo-iconos">
-          <div class="logo">
-            <img src="/img/logo.png" alt="logo" />
-          </div>
-    
-          <div class="iconos">
-            <div class="login-icono">
-              <a href="/login">
-                <i class="fa-solid fa-user"></i>
-              </a>
-            </div>
-            <div class="login-icono">
-              <a href="/productDetail">
-                <i class="fa-solid fa-shop"></i>
-              </a>
-            </div>
-            <div class="login-icono">
-              <i id="burguer" class="fas fa-bars"></i>
-            </div>
-          </div>
-        </div>
+       <form action="">
+        <label for="">Nombre</label>
+        <input type="text" value="<%= product.name %>">
+        <label for="">Precio</label>
+        <input type="text" value="<%= product.price %>">
+        <label for="">Descuento</label>
+        <input type="text" value="<%= product.discount %>">
+        
+       </form>
            
       </header>
     <main>
         <article>
             <div class="container-CenterImage">
-                <a href="#"><img src="img/servilletas.jpeg" alt="servilletas"></a>
+                <a href="#"><img src="" alt=""></a>
             </div>
             <div class="container-bottomImages">
-                <img src="img/servilletas.jpeg" alt="servilletas">
-                <img src="img/servilletas.jpeg" alt="servilletas">
-                <img src="img/servilletas.jpeg" alt="servilletas">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
             </div>
             <div class="description-article">
-                <h2>Servilleta</h2>
-                <p>buffet tussue<br>
-                  medida: 18 x 18<br>
-                  unidad: por 2000<br> 
-                </p>
-                <p>precio</p>
+                <h2><%= product.name %> </h2>
+                <p><%= product.description %> </p>
+                <p><%= product.image %> </p>
+                <p><%= product.price %></p>
                 
                 <div class="productForm">
                         
