@@ -22,20 +22,22 @@ let Controllers= {
         
       
 },
+//Item 7 de sprint 3. Edición de productos
     edit:function (req,res){
         let id= req.params.id
         let product= products.find(product=>product.id == id)
             res.sendFile(path.join(__dirname, "./views/edit.ejs"), {productos:product})
 },
+//Nuevo!!----Item 7 de sprint 3. Creación de productos, revisar create.ejs que es el archivo ejs de vista de este apartado.
 
-// Create - Form to create
 	create: (req, res) => {
 		
 		res.render('/create')
 	},
 	
-	// Create -  Method to store
-	store: (req, res) => {
+	// Nuevo---- Item 7 de Creación de nuevos productos. Lo vi parecido a un ejercicio de CRUD que hicimos, en este va habría que revisar 
+	//Ver redirección(redirect) si va a la ruta correcta.
+    store: (req, res) => {
 console.log(req.file)
 		let nuevoProducto= {
 			id: Date.now(),
