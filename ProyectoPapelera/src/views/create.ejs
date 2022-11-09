@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Formulario de creación'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/headerNoBanner') %>
+	<!-- /Header -->
+
+	<div class="container products-wrapper">
+		<div>
+			<div>
+				<h2 class="products-title">Formulario de creación de productos</h2>
+			</div>
+		</div>
+		<div class="">
+			<form action="/create" method="POST" enctype="multipart/form-data">
+				<div class="row product-detail">
+					<div>
+						<label for="name" class="form-label">Nombre del producto:</label>
+						<input <%= product.name %> >
+					</div>
+						<label for="price" class="form-label">Precio del producto:</label>
+						<input <%= product.price>
+					</div>
+					<div class="">
+						<label for="discount" class="form-label">Descuento:</label>
+						<input <%= product.discount>
+					</div>
+						<label for="category" class="form-label">Categoría:</label>
+						<select name="<%=product.category%>" id="category" class="form-input">
+							<option value="">Elegí</option>
+							<option value="in-sale">En oferta</option>
+							<option value="visited">Últimos agregados</option>
+						</select>
+					</div>
+					<div>
+						<label for="description" class="form-label">Descripción:</label>
+						<textarea <%= product.description%>></textarea>
+					</div>
+					<div>
+						<button type="submit" class="buy-now-button">Guardar producto</button>
+					<label for="imagen">Adjunta una imagen</label>
+						<input <%= product.image%>>
+					
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	<!-- /todos los productos -->
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>
