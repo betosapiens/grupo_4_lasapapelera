@@ -30,7 +30,7 @@ let Controllers= {
 
 // Create - Form to create
 	create: (req, res) => {
-		// Do the magic
+		
 		res.render('/create')
 	},
 	
