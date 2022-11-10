@@ -14,34 +14,29 @@
 			</div>
 		</div>
 
-		Detalle, nuevo ejs. 
-		/*Habría que trabajar más esta parte, las etiquetas, si usamos for o lo dejamos como está y la ruta si está bien dirigida"
-
-
 		<div class="">
 			<form action="/create" method="POST" enctype="multipart/form-data">
 				<div class="row product-detail">
 					<div>
 						<label for="name" class="form-label">Nombre del producto:</label>
-						<input <%= product.name %> >
+						<input type="text" id="name" name="name" placeholder="Ej: Servilletas" class="form-input">
 					</div>
 						<label for="price" class="form-label">Precio del producto:</label>
-						<input <%= product.price>
+						<input type="text" id="price" name="price" placeholder="Ej: 2500" class="form-input">
 					</div>
 					
 						<label for="description" class="form-label">Descripción:</label>
-						<textarea <%= product.description%>></textarea>
+						<textarea name="description" id="description" class="form-input"></textarea>
 					</div>
 					<div>
 						<button type="submit" class="buy-now-button">Guardar producto</button>
 					<label for="imagen">Adjunta una imagen</label>
-						<input <%= product.image%>>
+					<input type="file" name="imagen" id="imagen">
 					
 					</div>
 				</div>
 			</form>
 		</div>
-
 	</div>
 	<!-- /todos los productos -->
 

@@ -30,6 +30,8 @@ app.use('/productDetail', productRoutes)
 app.use('/register', registerRoutes)
 app.use('/login', loginRoutes)
 app.use('/productCart', productCartRoutes)
+app.use('/products',productRoutes)
+
 
 //npm 
 app.set("view engine", "ejs")

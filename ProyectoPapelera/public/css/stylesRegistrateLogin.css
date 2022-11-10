@@ -45,6 +45,9 @@ font-size:20px
     margin-bottom: 200px;
     text-align: center;
     margin-bottom: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 8px;
 }
 .olvidaste{
     font-size: 16px;
