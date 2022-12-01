@@ -1,0 +1,13 @@
+[
+    {
+        "id":1,
+        "first_name":"Lionel",
+        "last_name":"Messi",
+        "email":"lio10@messi.com",
+        "password": "mundial2022",
+        "category": "Comprador",
+        "image": "messi.jpg"
+        
+    }
+   
+    ]

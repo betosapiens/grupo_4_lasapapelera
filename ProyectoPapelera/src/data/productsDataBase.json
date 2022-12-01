@@ -27,6 +27,14 @@
         "price":37.50,
         "image": "servilletas.jpeg",
         "id":4
+    },
+    {       
+        "name":"Bolsa de Cartón",
+        "description":"description",
+        "price":27.50,
+        "image": "bolsacartón.jpg",
+        "id":5
     }
+    
     
     ]
