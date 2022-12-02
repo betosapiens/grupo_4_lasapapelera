@@ -20,8 +20,8 @@ router.get('/:id/edit/', productControllers.edit);
 router.put('/:id', productControllers.update)
 
 //Rutas de eliminación de productos
-router.get('/:id/delete', productControllers.delete);
-
+router.get('/:id/delete/', productControllers.delete); 
+router.delete('/:id', productControllers.delete);
 router.delete('/:id', productControllers.destroy);
 
 module.exports= router

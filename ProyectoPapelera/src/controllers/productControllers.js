@@ -36,7 +36,7 @@ res.render('productEdit', {products})
     store: (req, res) => {
 console.log(req.file)
 		let nuevoProducto= {
-			id: Date.now(),
+			id: req.params.id,
 			name: req.body.name,
             description: req.body.description,
             image: req.body.image,

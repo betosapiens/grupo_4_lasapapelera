@@ -18,11 +18,11 @@
     <header>
        <form action="">
         <label for="">Nombre</label>
-        <input type="text" value="<%= product.name %>">
+        <input type="text" value="<%= products.name %>">
         <label for="">Precio</label>
-        <input type="text" value="<%= product.price %>">
+        <input type="text" value="<%= products.price %>">
         <label for="">Descuento</label>
-        <input type="text" value="<%= product.discount %>">
+        <input type="text" value="<%= products.discount %>">
         
        </form>
            
@@ -38,10 +38,10 @@
                 <img src="" alt="">
             </div>
             <div class="description-article">
-                <h2><%= product.name %> </h2>
-                <p><%= product.description %> </p>
-                <p><%= product.image %> </p>
-                <p><%= product.price %></p>
+                <h2><%= products.name %> </h2>
+                <p><%= products.description %> </p>
+                <p><%= products.image %> </p>
+                <p><%= products.price %></p>
                 
                 <div class="productForm">
                         
@@ -56,7 +56,7 @@
                             </div>
                         </div>
 
-                        <button type="button">Añadir al carrito</button>
+                        <button type="button">Editar</button>
                 </div>
                 
 

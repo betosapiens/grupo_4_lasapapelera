@@ -1,40 +1,54 @@
 [
-    {
-        "name":"Bolsas",
-        "description":"description",
-        "price":500.00,
-        "image": "bolsas.jpeg",
-        "id":1
-    },
-    
-    {
-        "name":"Cartoneria",
-        "description":"description",
-        "price":47.00,
-        "image": "cartoneria.jpg",
-        "id":2
-    },
-    {
-        "name":"Papeles",
-        "description":"description",
-        "price":27.5,
-        "image": "papeles.jpeg",
-        "id":3
-    },
-    {       
-        "name":"Servilletas",
-        "description":"description",
-        "price":37.50,
-        "image": "servilletas.jpeg",
-        "id":4
-    },
-    {       
-        "name":"Bolsa de Cartón",
-        "description":"description",
-        "price":27.50,
-        "image": "bolsacartón.jpg",
-        "id":5
-    }
-    
-    
-    ]
+ {
+  "name": "Bolsas",
+  "description": "description",
+  "price": 500,
+  "image": "bolsas.jpeg",
+  "id": 1
+ },
+ {
+  "name": "Cartoneria",
+  "description": "description",
+  "price": 47,
+  "image": "cartoneria.jpg",
+  "id": 2
+ },
+ {
+  "name": "Papeles",
+  "description": "description",
+  "price": 27.5,
+  "image": "papeles.jpeg",
+  "id": 3
+ },
+ {
+  "name": "Servilletas",
+  "description": "description",
+  "price": 37.5,
+  "image": "servilletas.jpeg",
+  "id": 4
+ },
+ {
+  "name": "Bolsa de Cartón",
+  "description": "description",
+  "price": 27.5,
+  "image": "bolsacartón.jpg",
+  "id": 5
+ },
+ {
+  "name": "Bandeja",
+  "description": "Bandeja Fast Food Celeste",
+  "image": "BandejaFastFood.jpg",
+  "price": 500,
+  "id": 6
+ },
+ {
+  "name": "Bolsa",
+  "description": "Bolsa de Papel",
+  "price": 1200
+ },
+ {
+  "name": "BolsaaaaaaLocaaaa",
+  "description": "Bolsita",
+  "price": 1222
+ }
+]

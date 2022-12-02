@@ -2,6 +2,10 @@
 
 <form action="/products/<%= products.id %>?_method=PUT" method="POST">
 
+    
+    <label for="name">Id:</label>
+    <input type="text" name="Id" id="Id" value="<%= products.id %>">
+
     <label for="name">Nombre:</label>
     <input type="text" name="name" id="name" value="<%= products.name %>">
 
@@ -10,6 +14,10 @@
 
     <label for="price">Precio:</label>
     <input type="number" name="price" id="price" value="<%= products.price %>">
+<br>
+	<label for="imagen">Adjunta una imagen</label>
+						<input type="file" name="imagen" id="imagen">
+
 
     <button type="submit">Editar</button>
 

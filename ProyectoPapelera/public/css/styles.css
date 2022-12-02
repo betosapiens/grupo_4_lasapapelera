@@ -166,6 +166,31 @@ footer {
   text-align: center;
 }
 
+.buttonDetalle{
+  color:white;
+  background-color: blue;
+  font-weight: 400;
+  font-size: 15px;
+}
+.buttonEdit{
+  color:black;
+  background-color: yellow;
+}
+.buttonDelete{
+  color:black;
+  background-color: red;
+  font-weight: 400;
+  font-size: 15px;
+}
+.buttonCrearProducto{
+  color:black;
+  font-size:35px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: yellowgreen;
+}
+
 /*-------------ProductCart---------------
 
 header {
