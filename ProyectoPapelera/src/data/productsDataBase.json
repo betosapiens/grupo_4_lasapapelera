@@ -42,13 +42,6 @@
   "id": 6
  },
  {
-  "name": "Bolsa",
-  "description": "Bolsa de Papel",
-  "price": 1200
- },
- {
-  "name": "BolsaaaaaaLocaaaa",
-  "description": "Bolsita",
-  "price": 1222
+  "price": null
  }
 ]

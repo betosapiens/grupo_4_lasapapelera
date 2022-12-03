@@ -21,10 +21,10 @@ let Controllers= {
 },
 //Item 7 de sprint 3. Edición de productos
     edit:function (req,res){
-       let id= req.params.id
-        let product= products.find(product=>product.id == id)
-           // res.sendFile(path.join(__dirname, "./views/edit.ejs"), {productos:product})
-res.render('productEdit', {products})
+       let productsId= req.params.id
+       let editarProducto = products.filter((product)=> product.id == productsId )
+        
+res.render("productEdit", {editarProducto:editarProducto[0]});
         },
 
 
@@ -45,19 +45,25 @@ console.log(req.file)
 			//size: Number(req.body.size),
 			
 		}
-
 		products.push(nuevoProducto);
+
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')),
 		
 		res.redirect('/products')
 	},
     update: (req, res) => {
         
-            const id = req.params.id;
-            const product = products.find(product => product.id == id);
+            const productsId = req.params.id;
+            const product = products.find(product => product.id == productId);
+            products.forEach((products)=>{
+                if(products.id == productsId){
+    
             product.name = req.body.name;
             product.description = req.body.description;
             product.price = req.body.price;
+            }
+        })
+
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
             //Redirigimos al usuario a la lista de productos
             res.redirect('/products');

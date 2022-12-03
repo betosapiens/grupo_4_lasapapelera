@@ -1,19 +1,16 @@
 <h1>Editar producto</h1>
 
-<form action="/products/<%= products.id %>?_method=PUT" method="POST">
+<form action="/products/<%= editarProducto.id %>?_method=PUT" method="POST">
 
     
-    <label for="name">Id:</label>
-    <input type="text" name="Id" id="Id" value="<%= products.id %>">
-
     <label for="name">Nombre:</label>
-    <input type="text" name="name" id="name" value="<%= products.name %>">
+    <input type="text" name="name" id="name" value="<%= editarProducto.name %>">
 
     <label for="description">Descripción:</label>
-    <input type="text" name="description" id="description" value="<%= products.description %>">
+    <input type="text" name="description" id="description" value="<%= editarProducto.description %>">
 
     <label for="price">Precio:</label>
-    <input type="number" name="price" id="price" value="<%= products.price %>">
+    <input type="number" name="price" id="price" value="<%= editarProducto.price %>">
 <br>
 	<label for="imagen">Adjunta una imagen</label>
 						<input type="file" name="imagen" id="imagen">
