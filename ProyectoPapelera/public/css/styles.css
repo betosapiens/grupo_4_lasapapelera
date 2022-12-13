@@ -9,6 +9,8 @@ header {
 .logo-iconos {
   display: flex;
   text-decoration: none;
+  color: black;
+
 }
 
 .logo {
@@ -16,10 +18,10 @@ header {
   width: 50%;
 }
 
-p,
+/* p,
 h1 {
   font-family: "Barlow Condensed", sans-serif;
-}
+} */
 
 ul {
   list-style: none;
@@ -43,6 +45,9 @@ ul {
 
 .login-icono {
   font-size: 40px;
+  color: black;
+  padding-top: 5px;
+
 }
 
 .login-cart {
@@ -57,6 +62,11 @@ ul {
 
 body {
   background-color: rgba(231, 225, 225, 0.799);
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  justify-content: space-between;
+    display: flex;
+    flex-direction: column;
 }
 .productos {
   margin: 15px;
@@ -102,6 +112,12 @@ body {
 footer {
   background: #000128;
   color: white;
+  display: flex;
+  padding: 10px 0px 10px 30px;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px 5px 0px 0px;
+  width: 100%;
 }
 
 .titulos-footer {
@@ -114,6 +130,30 @@ footer {
   font-size: 12px;
   text-align: center;
 }
+
+
+.copyright{
+  padding-left: 80px;
+  
+}
+.copyright i{
+  font-size: 20px;
+  padding-right: 5px;
+}
+
+
+.lorenzo{
+  display: flex;
+  text-align: center;
+}
+
+.social-icon{
+  padding-right: 30px;
+  font-size: 30px;
+  color: white;
+
+}
+
 
 
 
