@@ -31,12 +31,11 @@ app.listen(3032, () => console.log("servidor corriendo! 3032"));
 
 
 app.use('/', mainRouter)
-app.use('/products', productsList)
+app.use('/products', productRoutes)
 app.use('/productDetail', productRoutes)
 app.use('/register', registerRoutes)
 app.use('/login', loginRoutes)
 app.use('/productCart', productCartRoutes)
-app.use('/products', productRoutes)
 app.use('/productEdit',productRoutes)
 
 

@@ -22,10 +22,10 @@ let Controllers= {
 //Item 7 de sprint 3. Edición de productos
     edit:function (req,res){
        let productsId= req.params.id
-       let editarProducto = products.filter((product)=> product.id == productsId )
+       let editarProducto = products.find(product=> product.id == productsId );
         
-res.render("productEdit", {editarProducto:editarProducto[0]});
-        },
+       res.render("productEdit", {editarProducto});
+    },
 
 
 	create: (req, res) => {
@@ -47,26 +47,22 @@ console.log(req.file)
 		}
 		products.push(nuevoProducto);
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')),
+		//fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')),
 		
-		res.redirect('/products')
+		res.redirect('products')
 	},
     update: (req, res) => {
         
             const productsId = req.params.id;
-            const product = products.find(product => product.id == productId);
-            products.forEach((products)=>{
-                if(products.id == productsId){
-    
+            const product = products.find(product => product.id == productsId);
+           
             product.name = req.body.name;
             product.description = req.body.description;
             product.price = req.body.price;
-            }
-        })
 
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
             //Redirigimos al usuario a la lista de productos
-            res.redirect('/products');
+            res.redirect('products');
       
         },
         delete: (req, res) => {
@@ -75,6 +71,8 @@ console.log(req.file)
                 const product = products.find(product => product.id == id);
                 res.render('productDelete', { product });
         },
+
+
 
         destroy: (req, res) => {
             
@@ -85,9 +83,9 @@ console.log(req.file)
             //Eliminamos el producto del array
             products.splice(index, 1);
             //Escribimos el nuevo array de productos en el archivo JSON
-            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+            //fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
             //Redirigimos al usuario a la lista de productos
-            res.redirect('/products');
+            res.redirect('products');
         }
     }
 

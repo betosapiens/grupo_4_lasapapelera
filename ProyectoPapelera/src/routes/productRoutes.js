@@ -6,22 +6,17 @@ const router= express.Router();
 
 router.get('/', productControllers.index);
 
-
 //Rutas de creación de productos /
 router.get('/create', productControllers.create); 
-router.post('/', productControllers.store); 
-
-
-router.get('/:id', productControllers.detail)
-
+router.post('/create', productControllers.store); 
+router.get('/detail/:id', productControllers.detail)
 
 //Rutas de edición de productos/ 
-router.get('/:id/edit/', productControllers.edit); 
-router.put('/:id', productControllers.update)
+router.get('/edit/:id', productControllers.edit); 
+router.put('/edit/:id', productControllers.update)
 
 //Rutas de eliminación de productos
-router.get('/:id/delete/', productControllers.delete); 
-router.delete('/:id', productControllers.delete);
-router.delete('/:id', productControllers.destroy);
+router.get('/:id/delete', productControllers.delete);
+router.delete('/:id/delete', productControllers.destroy);
 
 module.exports= router
