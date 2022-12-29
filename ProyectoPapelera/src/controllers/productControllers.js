@@ -19,6 +19,33 @@ let Controllers= {
         
       
 },
+
+create: (req, res) => {
+
+    res.render('productCreate')
+},
+
+store: (req, res) => {
+    const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+            let nuevoProducto= {
+                id: req.params.id,
+                name: req.body.name,
+                description: req.body.description,
+                image: req.body.image,
+                //category: req.body.category,
+                price: Number(req.body.price), 
+                //size: Number(req.body.size),
+                
+            }
+            products.push(nuevoProducto);
+    
+            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')),
+            
+            res.redirect('products')
+        },
+
+        
+
 //Item 7 de sprint 3. Edición de productos
     edit:function (req,res){
        let productsId= req.params.id
@@ -28,29 +55,8 @@ let Controllers= {
     },
 
 
-	create: (req, res) => {
-
-		res.render('productCreate')
-	},
 	
-    store: (req, res) => {
-console.log(req.file)
-		let nuevoProducto= {
-			id: req.params.id,
-			name: req.body.name,
-            description: req.body.description,
-            image: req.body.image,
-            //category: req.body.category,
-			price: Number(req.body.price), 
-			//size: Number(req.body.size),
-			
-		}
-		products.push(nuevoProducto);
 
-		//fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')),
-		
-		res.redirect('products')
-	},
     update: (req, res) => {
         
             const productsId = req.params.id;

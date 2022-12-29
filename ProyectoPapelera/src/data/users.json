@@ -1,13 +1,154 @@
 [
-    {
-        "id":1,
-        "first_name":"Lionel",
-        "last_name":"Messi",
-        "email":"lio10@messi.com",
-        "password": "mundial2022",
-        "category": "Comprador",
-        "image": "messi.jpg"
-        
-    }
-   
-    ]
+ {
+  "id": 1
+ },
+ {
+  "id": 2
+ },
+ {
+  "id": 3
+ },
+ {
+  "id": 4
+ },
+ {
+  "id": 5
+ },
+ {
+  "id": 6
+ },
+ {
+  "id": 7
+ },
+ {
+  "id": 8
+ },
+ {
+  "id": 9
+ },
+ {
+  "id": 10
+ },
+ {
+  "id": 11
+ },
+ {
+  "id": 12
+ },
+ {
+  "first_name": "asdasd",
+  "id": 13
+ },
+ {
+  "first_name": "martin",
+  "last_name": "loepz",
+  "email": "asdad@gmail.com",
+  "password": "123",
+  "category": "vendedor",
+  "id": 14
+ },
+ {
+  "first_name": "aaaaaaaa",
+  "last_name": "aaaaaaa",
+  "email": "aaaaaa@gmail.com",
+  "password": "aaaa",
+  "category": "comprador",
+  "id": 15
+ },
+ {
+  "first_name": "au",
+  "last_name": "vidal",
+  "email": "asdkmad@gmail.com",
+  "password": "aaaaaa",
+  "category": "vendedor",
+  "id": 16
+ },
+ {
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "password": "",
+  "category": "",
+  "id": 17
+ },
+ {
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "password": "",
+  "category": "",
+  "id": 18
+ },
+ {
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "password": "",
+  "category": "",
+  "id": 19
+ },
+ {
+  "first_name": "",
+  "last_name": "",
+  "email": "aaa",
+  "password": "",
+  "category": "",
+  "id": 20
+ },
+ {
+  "first_name": "",
+  "last_name": "",
+  "email": "aaa",
+  "password": "",
+  "category": "",
+  "id": 21
+ },
+ {
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "password": "aaa",
+  "category": "",
+  "id": 22
+ },
+ {
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "password": "aaa",
+  "category": "",
+  "id": 23
+ },
+ {
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "password": "aaa",
+  "category": "",
+  "id": 24
+ },
+ {
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "password": "aaa",
+  "category": "",
+  "id": 25
+ },
+ {
+  "first_name": "",
+  "last_name": "aasdasd",
+  "email": "",
+  "password": "aa",
+  "category": "",
+  "id": 26
+ },
+ {
+  "first_name": "qqq",
+  "last_name": "QQQ",
+  "email": "QQQ@GMAIL.COM",
+  "password": "123",
+  "category": "vendedor",
+  "id": 27
+ }
+]

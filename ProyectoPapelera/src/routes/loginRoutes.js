@@ -1,8 +1,8 @@
-let express= require("express")
-let router= express.Router()
-const loginController= require('../controllers/loginController')
+//let express= require("express")
+//let router= express.Router()
+//const loginController= require('../controllers/loginController')
 
 
-router.get('/',loginController.index);
+//router.get('/',loginController.index);
 
-module.exports= router
+//module.exports= router

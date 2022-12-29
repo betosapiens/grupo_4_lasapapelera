@@ -11,50 +11,71 @@
     
     </head>
 <body>
-<form action="/register" method="GET" class="create-form" >
+
 <div class="formulario-de-registro">
     <h2 class="titulo-form">¿No tenes tu cuenta? Registrate</h2>
 <p class="parrafo-form">Registrarse tarda solo unos segundos y otorga acceso a todo nuestro catálogo</p>
 </div>
 </div>
-  
-    <div class="control-formulario">   
-        <label>Nombre</label>
-        <input type="text" name="Nombre" required class="control">
+
+<form action="/register" method="POST"  enctype="multipart/form-data">
+
+    <div class="field">
+        <label for="first_name">Nombre</label>
+        <div class="control">
+            <input type="text" name="first_name" id="first_name">
+        </div>
+        <p class="feedback"></p>
     </div>
-    <div class="control-formulario">   
-        <label>Apellido</label>
-        <input type="text" name="Apellido" required class="control">
+
+     <div class="field">
+        <label for="last_name">Apellido</label>
+        <div class="control">
+            <input type="text" name="last_name" id="last_name">
+        </div>
+        <p class="feedback"></p>
     </div>
-    <div class="control-formulario">   
-        <label>Contraseña</label>
-        <input type="password" name="contraseña" required class="control">
+
+    <div class="field">
+        <label for="email">Email</label>
+        <div class="control">
+            <input type="text" name="email" id="email">
+        </div>
+        <p class="feedback"></p>
     </div>
-    <div class="control-formulario">   
-        <label>Confirmar Contraseña</label>
-        <input type="password" name="Nombre y Apellido" required class="control">
+
+    <div class="field">
+        <label for="password">Password</label>
+        <div class="control">
+            <input type="password" name="password" id="password">
+        </div>
+        <p class="feedback"></p>
     </div>
-    <div class="control-formulario">   
-        <label>D.N.I/CUIT</label>
-        <input type="number" name="D.N.I" required class="control">
+
+    <div>
+        <label><b>Imagen de perfil</b></label>
+        <input class="" type="file" name="avatar"> 
     </div>
-    <div class="control-formulario">   
-        <label>Dirección</label>
-        <input type="text" name="Dirección" required class="control">
+
+    <div class="field">
+        <label for="category">Categoría</label>
+        <div class="control">
+            <select name="category" id="category">
+                <option value="">Seleccione una opción</option>
+                <option value="vendedor">Vendedor</option>
+                <option value="comprador">Comprador</option>
+            </select>
+        </div>
+        <p class="feedback"></p>
     </div>
-    <div class="control-formulario">   
-        <label>Localidad</label>
-        <input type="text" name="Localidad" required class="control">
+
+ -->
+    <div class="field">
+        <div class="control">
+            <button type="submit">Crear usuario</button>
+        </div>
     </div>
-    <div class="control-formulario">   
-        <label>Teléfono</label>
-        <input type="tel" name="telefono" required class="control">
-    </div>
-    <div class="control-formulario">   
-        <label>Código Postal</label>
-        <input type="text" name="Código Postal" required class="control">
-    </div>
-            <button type="submit" class="boton-formulario">Registrate</button>
-        </form>
-    </body>
-    </html>
+
+ </form>
+ </body>
+ </html>
