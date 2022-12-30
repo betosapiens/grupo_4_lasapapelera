@@ -150,5 +150,45 @@
   "password": "123",
   "category": "vendedor",
   "id": 27
+ },
+ {
+  "first_name": "augusto ",
+  "last_name": "vidal",
+  "email": "asd@gmail.com",
+  "password": "123",
+  "category": "vendedor",
+  "id": 28
+ },
+ {
+  "first_name": "alberto",
+  "last_name": "lopez",
+  "email": "lopez@gmail.com",
+  "password": "perro",
+  "category": "comprador",
+  "id": 29
+ },
+ {
+  "first_name": "aaa",
+  "last_name": "aaa",
+  "email": "qq@gmail.com",
+  "password": "444",
+  "category": "vendedor",
+  "id": 30
+ },
+ {
+  "first_name": "aaaa",
+  "last_name": "aaaaaaaaaa",
+  "email": "eee@gmail.com",
+  "password": "ttt",
+  "category": "vendedor",
+  "id": 31
+ },
+ {
+  "first_name": "DIOS ",
+  "last_name": "DIOS ",
+  "email": "DIOS ",
+  "password": "$2a$10$n5NWJBrdOypgUFMPubFXLuItyamfuY.chktVtza3J6D6nA6.5lRsi",
+  "category": "vendedor",
+  "id": 32
  }
 ]

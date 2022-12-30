@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
+
 let model = function(tableName) {
+    
     return {
         filePath: path.join(__dirname, '../data/' + tableName + '.json'),
         readFile() {
@@ -42,7 +44,20 @@ let model = function(tableName) {
             this.writeFile(rows);
 
             return row.id;
+            let allUsers = this.findAll();
+		let newUser = {
+			id: this.generateId(),
+			...userData
+		}
+
+		allUsers.push(newUser);
+		fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null,  ' '));
+		return newUser;
         },
+        getData: function () {
+            return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
+        },
+
         update(row) {
             let rows = this.readFile();
             let updatedRows = rows.map(oneRow => {
@@ -57,6 +72,11 @@ let model = function(tableName) {
 
             return row.id;
         },
+
+        findAll: function () {
+            return this.getData();
+        },
+
         delete(id) {
             let rows = this.readFile();
             let updatedRows = rows.filter(oneRow => oneRow.id != id); 

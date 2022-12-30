@@ -3,6 +3,7 @@
 const jsonTable = require('../data/jsonTable');
 const usersModel = jsonTable('users');
 const { validationResults } = require("express-validator")
+const bcryptjs = require("bcryptjs")
 
 
 //const app = express();
@@ -14,21 +15,23 @@ const controller = {
 	},	
 
 	store: (req, res) => {
-        /* -------------------VALIDACION 
-        const resultsValidation = validationResults(req)
-        if (resultsValidation.errors.length > 0) {
-            return res.render("register", {
-                errors: resultsValidation.mapped(),
-            })
-        }*/
-    
-         let user = req.body;    
+        console.log(req.body)    
+       
+        let userToCreate = {
+			...req.body,
+			password: bcryptjs.hashSync(req.body.password, 10),
+			
+		}
 
-        userId = usersModel.create(user);
+        let userId = usersModel.create(userToCreate);
 
-        res.redirect('/register' )//+ userId);
+        res.send('FUNCIONNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!' ) + userId;
+
     },
+
+      
     
+
     /*processRegister: (req, res) => {
         return res.send({
             body: req.body,
