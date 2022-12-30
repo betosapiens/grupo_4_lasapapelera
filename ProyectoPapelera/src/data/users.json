@@ -190,5 +190,13 @@
   "password": "$2a$10$n5NWJBrdOypgUFMPubFXLuItyamfuY.chktVtza3J6D6nA6.5lRsi",
   "category": "vendedor",
   "id": 32
+ },
+ {
+  "first_name": "adasd",
+  "last_name": "adssdad",
+  "email": "ddd",
+  "password": "$2a$10$PKxMo.Kvl2MbZ.etsG2EZuuO52fEfjTSSN32HCgYXs57dcwSY/9/m",
+  "category": "vendedor",
+  "id": 33
  }
 ]

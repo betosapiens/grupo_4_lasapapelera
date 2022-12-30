@@ -3,21 +3,11 @@ let router= express.Router()
 const path = require("path")
 const { body } = require("express-validator")
 //const loginController= require('../controllers/loginController')
-const registerController = require('../controllers/registerController')
-const multer = require('multer')
+const usersControllers = require('../controllers/usersControllers')
 const { validateHeaderValue } = require("http")
+const uploadFile = require('../middlewares/multerMiddleware')
 
 
-const storage = multer.diskStorage({ 
-    destination: (req, file, cb) => { 
-       cb(null, './public/images/users'); 
-    }, 
-    filename: (req, file, cb) => { 
-      let fileName = `${Date.now()}_img_${path.extname(file.originalname)}`; 
-       cb(null, fileName)}  
-  })
-
-  const uploadFile = multer({ storage })
   const validations = [
    body("first_name").notEmpty().withMessage("Tienes escribir un nombre"),
    /*body("last_name").notEmpty().withMessage("Tienes que escribir un apellido"),
@@ -41,16 +31,13 @@ const storage = multer.diskStorage({
    }) ,*/
   ]
 
-router.get('/', registerController.index);
 
-//router.get('/',loginController.index);
+router.get('/register', usersControllers.index);
 
-router.post('/', uploadFile.single("avatar"), validations, registerController.store);
-
+router.get('/login',usersControllers.login);
 
 
 
-
-
+router.post('/register', uploadFile.single("avatar"), validations, usersControllers.store);
 
 module.exports = router

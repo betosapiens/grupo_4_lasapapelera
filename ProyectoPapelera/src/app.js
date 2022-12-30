@@ -13,22 +13,16 @@ app.use(express.urlencoded({ extended: false }));
 const mainRouter = require('./routes/main');
 const productsList= require('./routes/productRoutes');
 const productRoutes= require('./routes/productRoutes');
-const registerRoutes = require('./routes/users');
-const loginRoutes= require('./routes/users');
+const usersRoutes = require('./routes/users');
+
 const productCartRoutes = require('./routes/productCartRoutes');
 
 app.use('/', mainRouter)
 app.use('/products', productRoutes)
 //app.use('/productDetail', productRoutes)
-app.use('/register', registerRoutes)
-//app.use('/login', registerRoutes)
+app.use('/user', usersRoutes)
 //app.use('/productCart', productCartRoutes)
 //app.use('/productEdit',productRoutes)
-
-
-
-
-
 
 
 //const mainRoutes= require('./src/routes/mainRoutes')
