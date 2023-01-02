@@ -54,6 +54,7 @@ let model = function(tableName) {
 		fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null,  ' '));
 		return newUser;
         },
+        
         getData: function () {
             return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
         },
@@ -77,6 +78,18 @@ let model = function(tableName) {
             return this.getData();
         },
 
+        findByPk: function (id) {
+            let allUsers = this.findAll();
+            let userFound = allUsers.find(oneUser => oneUser.id === id);
+            return userFound;
+        },
+    
+        findByField: function (field, text) {
+            let allUsers = this.findAll();
+            let userFound = allUsers.find(oneUser => oneUser[field] === text);
+            return userFound;
+        },
+    
         delete(id) {
             let rows = this.readFile();
             let updatedRows = rows.filter(oneRow => oneRow.id != id); 
