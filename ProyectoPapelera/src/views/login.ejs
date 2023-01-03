@@ -15,6 +15,12 @@
                 <div class="control-formulario">
                     <label>Email<span>*</span></label>
                     <input type="text" name="email" class="control">
+                    <% if (locals.errors && errors.email) { %>
+                        <div  class="text-danger" >
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                   
                 </div>
                 <div class="control-formulario">
                     <label>Contraseña<span>*</span></label>

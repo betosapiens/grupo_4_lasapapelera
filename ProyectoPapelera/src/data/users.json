@@ -1,10 +1,11 @@
 [
  {
+  "id": 1,
   "first_name": "Augusto",
   "last_name": "Vidal",
-  "email": "augusto@gmail.com",
-  "password": "$2a$10$9xljDFYkKKyde1el9nj.4uUuLUtmit0B6DE89EMz9Ij3R0MzKeLB.",
+  "email": "pepe@gmail.com",
+  "password": "$2a$10$tzWvvQOoPmz2VGzrw58Mz.NtMRuOFU1tecZMPegPmoerJuKLvGjEW",
   "category": "comprador",
-  "id": 1
+  "avatar": "1672781368627_img.png"
  }
 ]

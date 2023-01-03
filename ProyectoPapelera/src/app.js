@@ -1,8 +1,16 @@
 //const { application } = require("express");   ????
 const express = require('express');
+const session = require('express-session');
 const app = express();
  //const methodOverride = require('method-override');
 const path = require("path"); 
+
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false,
+}));
+
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -37,10 +45,6 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());*/
-
-
-
-
 
 //npm 
 
