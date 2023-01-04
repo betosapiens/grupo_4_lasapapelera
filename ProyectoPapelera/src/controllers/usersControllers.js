@@ -35,7 +35,7 @@ const controller = {
     },
 
     loginProcess: (req, res) => {
-        //return res.send("hola")
+        
        let userToLogin = usersModel.findByField('email', req.body.email);
         
        if (userToLogin) { 
@@ -45,6 +45,7 @@ const controller = {
 		    req.session.userLogged = userToLogin;
             
             if(req.body.remember_user) {
+                
                 res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
             }
 

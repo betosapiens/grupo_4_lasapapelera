@@ -7,5 +7,14 @@
   "password": "$2a$10$tzWvvQOoPmz2VGzrw58Mz.NtMRuOFU1tecZMPegPmoerJuKLvGjEW",
   "category": "comprador",
   "avatar": "1672781368627_img.png"
+ },
+ {
+  "id": 2,
+  "first_name": "rodrigo",
+  "last_name": "pepe",
+  "email": "vidal@gmail.com",
+  "password": "$2a$10$6kLjvq0AIi8Ep9sHKRo4YOSfG1FCEMQWyBS9xWwgT4XOo0ctAGuiG",
+  "category": "comprador",
+  "avatar": "1672870979893_img.png"
  }
 ]

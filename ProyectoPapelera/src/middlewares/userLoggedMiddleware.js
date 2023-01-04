@@ -1,14 +1,15 @@
-function userLoggedMiddleware(req, res, next) {
-	console.log('pase por el user middleware del logged')
-	
-	res.locals.isLogged = false
+const User = require('../data/jsonTable');
 
-	if(req.session && req.session.userLogged) {
-		res.locals.isLogged = true
-		res.locals.userLogged = req.session.userLogged;
-	}
-	
-	next();
+function userLoggedMiddleware(req, res, next) {
+    res.locals.isLogged = false;
+    
+    //let emailInCookie = req.cookies.userEmail;
+    //console.log(emailInCookie)
+    
+    //let userFromCookie = User.findByField('email', emailInCookie);
+
+    next();
 }
 
 module.exports = userLoggedMiddleware;
+
