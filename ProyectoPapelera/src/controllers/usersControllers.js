@@ -11,6 +11,7 @@ const bcryptjs = require("bcryptjs")
 
 const controller = {
 	index: (req, res) => {
+        res.cookie("testing", "Hola mundo!", {maxAge: 1000 * 30 })
 		res.render('register')
 	},	
 
@@ -42,6 +43,11 @@ const controller = {
         if (isOkThePassword) {
             delete userToLogin.password;
 		    req.session.userLogged = userToLogin;
+            
+            if(req.body.remember_user) {
+                res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+            }
+
             return res.redirect('/user/profile')
         }
 
@@ -65,6 +71,8 @@ const controller = {
     },
 
     profile: (req, res) => {
+
+        console.log(req.cookies.userEmail)
         return res.render('userProfile', {
 			user: req.session.userLogged
 		});

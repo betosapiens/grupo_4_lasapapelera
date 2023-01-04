@@ -4,6 +4,9 @@ const session = require('express-session');
 const app = express();
  //const methodOverride = require('method-override');
 const path = require("path"); 
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
+const cookies = require('cookie-parser');
+
 
 app.use(session({
 	secret: "Shhh, It's a secret",
@@ -11,6 +14,8 @@ app.use(session({
 	saveUninitialized: false,
 }));
 
+app.use(userLoggedMiddleware)
+app.use(cookies())
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));

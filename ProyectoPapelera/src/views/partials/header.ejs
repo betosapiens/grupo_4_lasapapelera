@@ -1,8 +1,10 @@
 <header>
+ <% if (locals.isLogged) { %> 
     <div class="logo-iconos">
-      <a href="/">
       <div class="logo">
-        <img src="/images/logo.png" alt="logo" />
+      <a href="/">
+      
+        <img src="/images/logo.png" alt="logo" >
       </a>
       </div>
 
@@ -18,13 +20,50 @@
           </a>
         </div>
         <div class="login-icono">
-          <a href="/products">
           <i id="burguer" class="fas fa-bars"></i>
         </div>
+        
+        <a>
+        <img src="/images/users/<%= locals.userLogged.avatar %>" width="100" style="border-radius: 100%;">
+        </a>
+        <h3>Hola <%= locals.userLogged.first_name%></h3>
+        
+
+        <div class="logout">
+          <a href="/user/logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <p>Logout</p>
+        </a>
+        </div>
+       
       </div>
+    </div>    
+ <% } else { %>
+  <div class="logo-iconos">
+    <div class="logo">
+    <a href="/">
+    
+      <img src="/images/logo.png" alt="logo" >
+    </a>
     </div>
 
-    <section class="banner">
-      <img class="banner" src="images/banner2.jpg" alt="banner" />
-    </section>
+    <div class="iconos">
+      <div class="login-icono">
+        <a href="/user/login">
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </div>
+      <div class="login-icono">
+        <a href="/productCart">
+          <i class="fa-solid fa-shop"></i>
+        </a>
+      </div>
+      <div class="login-icono">
+        <i id="burguer" class="fas fa-bars"></i>
+      </div>
+    
+    </div>
+  </div>    
+  <% } %>
+
   </header>

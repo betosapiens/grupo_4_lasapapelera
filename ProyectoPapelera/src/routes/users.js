@@ -7,7 +7,7 @@ const usersControllers = require('../controllers/usersControllers')
 const { validateHeaderValue } = require("http")
 const uploadFile = require('../middlewares/multerMiddleware')
 const guestMiddleware = require('../middlewares/guestMiddleware');
-const authMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 
 //Formulario de registro
@@ -23,10 +23,10 @@ router.get('/login', guestMiddleware, usersControllers.login);
 router.post("/login", usersControllers.loginProcess);
 
 //Perfil de usuario
-router.get("/profile", usersControllers.profile)
+router.get('/profile/', authMiddleware, usersControllers.profile)
 
 //logout
-router.get("/logout", usersControllers.logout)
+router.get("/logout/", usersControllers.logout)
 
 
 module.exports = router

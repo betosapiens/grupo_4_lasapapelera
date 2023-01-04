@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/css/stylesRegistrateLogin.css">
 
     <body>
-        <%- include('./partials/headerNoBanner') %>
+        <%- include('./partials/header') %>
 
             <form action="/user/login" method="POST" class="create-form">
                 <div class="formulario-de-registro">
@@ -30,6 +30,11 @@
                     <div>
                         <div>
                             <button type="submit" name="boton-formulario" class="boton-formulario">Acceder</button>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+                            </label>
                         </div>
                         <div>
                             <a class="registrate" href="/user/register">Registrate</a>
