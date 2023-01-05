@@ -14,8 +14,9 @@ app.use(session({
 	saveUninitialized: false,
 }));
 
-app.use(userLoggedMiddleware)
 app.use(cookies())
+app.use(userLoggedMiddleware)
+
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
