@@ -26,20 +26,6 @@
   "price": 37.5,
   "image": "servilletas.jpeg",
   "id": 4
- },
- {
-  "name": "Bolsa de Cartón",
-  "description": "description",
-  "price": 27.5,
-  "image": "bolsacartón.jpg",
-  "id": 5
- },
- {
-  "name": "Bandeja",
-  "description": "Bandeja Fast Food Celeste",
-  "image": "BandejaFastFood.jpg",
-  "price": 500,
-  "id": 6
  }
-
+ 
 ]

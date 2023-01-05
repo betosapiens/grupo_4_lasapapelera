@@ -1,5 +1,5 @@
-const express= require('express');
-const productControllers= require('../controllers/productControllers')
+const express = require('express');
+const productControllers = require('../controllers/productControllers')
 
 const router= express.Router();
 
@@ -16,7 +16,7 @@ router.get('/edit/:id', productControllers.edit);
 router.put('/edit/:id', productControllers.update)
 
 //Rutas de eliminación de productos
-router.get('/:id/delete', productControllers.delete);
-router.delete('/:id/delete', productControllers.destroy);
+router.get('/delete/:id', productControllers.delete);
+router.delete('/delete/:id', productControllers.destroy);
 
 module.exports= router

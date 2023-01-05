@@ -2,10 +2,25 @@
 const express = require('express');
 const session = require('express-session');
 const app = express();
- //const methodOverride = require('method-override');
+
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 const path = require("path"); 
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
 const cookies = require('cookie-parser');
+
+
+//RUTAS REQUERIDAS
+const mainRouter = require('./routes/main');
+
+const productRoutes= require('./routes/productRoutes');
+
+const usersRoutes = require('./routes/users');
+
+//const productsList= require('./routes/productRoutes');
+
+//const productCartRoutes = require('./routes/productCartRoutes');
+
 
 
 app.use(session({
@@ -24,17 +39,13 @@ app.use(express.urlencoded({ extended: false }));
 
 //rutas
 
-const mainRouter = require('./routes/main');
-const productsList= require('./routes/productRoutes');
-const productRoutes= require('./routes/productRoutes');
-const usersRoutes = require('./routes/users');
-
-const productCartRoutes = require('./routes/productCartRoutes');
-
 app.use('/', mainRouter)
+
 app.use('/products', productRoutes)
-//app.use('/productDetail', productRoutes)
+
 app.use('/user', usersRoutes)
+
+//app.use('/productDetail', productRoutes)
 //app.use('/productCart', productCartRoutes)
 //app.use('/productEdit',productRoutes)
 
@@ -55,7 +66,7 @@ app.use(express.json());*/
 //npm 
 
 app.set('views', path.join(__dirname, '/views'));
-//app.use(methodOverride('_method'));
+
 
 app.listen(3032, () => console.log("servidor corriendo! 3032"));
 

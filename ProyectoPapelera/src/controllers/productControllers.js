@@ -27,7 +27,9 @@ create: (req, res) => {
 
 store: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-            let nuevoProducto= {
+    const data = req.body
+    
+    let nuevoProducto= {
                 id: req.params.id,
                 name: req.body.name,
                 description: req.body.description,
@@ -89,9 +91,10 @@ store: (req, res) => {
             //Eliminamos el producto del array
             products.splice(index, 1);
             //Escribimos el nuevo array de productos en el archivo JSON
-            //fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
             //Redirigimos al usuario a la lista de productos
-            res.redirect('products');
+            
+            res.redirect('/products');
         }
     }
 
