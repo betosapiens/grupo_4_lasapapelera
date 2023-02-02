@@ -8,7 +8,7 @@ router.get('/', productControllers.index);
 
 //Rutas de creación de productos /
 router.get('/create', productControllers.create); 
-router.post('/create', productControllers.store); 
+router.post('/', productControllers.store); 
 router.get('/detail/:id', productControllers.detail)
 
 //Rutas de edición de productos/ 

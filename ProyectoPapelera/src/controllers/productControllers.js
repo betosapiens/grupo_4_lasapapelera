@@ -46,7 +46,6 @@ store: (req, res) => {
             res.redirect('products')
         },
 
-        
 
 //Item 7 de sprint 3. Edición de productos
     edit:function (req,res){
