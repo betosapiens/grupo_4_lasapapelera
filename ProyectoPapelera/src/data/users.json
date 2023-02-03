@@ -16,5 +16,32 @@
   "password": "$2a$10$6kLjvq0AIi8Ep9sHKRo4YOSfG1FCEMQWyBS9xWwgT4XOo0ctAGuiG",
   "category": "comprador",
   "avatar": "1672870979893_img.png"
+ },
+ {
+  "id": 3,
+  "first_name": "beto",
+  "last_name": "sapiens",
+  "email": "beto@gmail.com",
+  "password": "$2a$10$I4ui4OoFfdxprXr5F2BZgeOyn0sdeAOgES0X6fdLCUJsLO.fX3flq",
+  "category": "comprador",
+  "avatar": "1675438200353_img.jpg"
+ },
+ {
+  "id": 4,
+  "first_name": "alan",
+  "last_name": "asd",
+  "email": "alan@gmail.com",
+  "password": "$2a$10$tUavncxMBeasw7LvNHdKeODPIat18NQpP8HacPoHbxCRMn6.Wq7G6",
+  "category": "comprador",
+  "avatar": "1675438311802_img.png"
+ },
+ {
+  "id": 5,
+  "first_name": "sdasdadasd",
+  "last_name": "asdasdasdasd",
+  "email": "asda@gmail.com",
+  "password": "$2a$10$Pa3kBFojwuWIX4xskrOhPecNyBRrorvqMuTmG9kNVr3Mw7Vkug8Tu",
+  "category": "vendedor",
+  "avatar": "1675441819805_img.jpg"
  }
 ]

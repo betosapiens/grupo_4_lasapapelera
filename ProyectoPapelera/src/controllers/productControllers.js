@@ -4,7 +4,7 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+//const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
     
 let Controllers= {
@@ -28,18 +28,23 @@ create: (req, res) => {
 store: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
     const data = req.body
-    
+    console.log(req.body)
+    const lastIndex = products.length - 1;
+    const lastProduct = products[lastIndex];
+    const biggestId = lastProduct ? lastProduct.id : 0;
+    const newId = biggestId + 1;
     let nuevoProducto= {
-                id: req.params.id,
+                id: newId,
                 name: req.body.name,
                 description: req.body.description,
-                image: req.body.image,
+                image: req.file.filename,
                 //category: req.body.category,
                 price: Number(req.body.price), 
                 //size: Number(req.body.size),
                 
             }
             products.push(nuevoProducto);
+            console.log(nuevoProducto)
     
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')),
             
