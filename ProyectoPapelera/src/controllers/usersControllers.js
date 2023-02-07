@@ -26,7 +26,7 @@ const controller = {
 
         let userId = usersModel.create(userToCreate);
 
-        res.send('FUNCIONNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!' ) + userId;
+        res.redirect('/' ) + userId;
 
     },
 

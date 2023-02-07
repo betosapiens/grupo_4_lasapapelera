@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../../database/models/Product');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -28,11 +29,12 @@ create: (req, res) => {
 store: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
     const data = req.body
-    console.log(req.body)
+    
     const lastIndex = products.length - 1;
     const lastProduct = products[lastIndex];
     const biggestId = lastProduct ? lastProduct.id : 0;
     const newId = biggestId + 1;
+ 
     let nuevoProducto= {
                 id: newId,
                 name: req.body.name,
@@ -44,10 +46,21 @@ store: (req, res) => {
                 
             }
             products.push(nuevoProducto);
-            console.log(nuevoProducto)
+            //console.log(nuevoProducto)
     
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')),
-            
+
+            console.log(db.create)
+
+       /*      db.products.create({
+                name: req.body.name,
+                description: req.body.description,
+                image: req.file.filename,
+                //category: req.body.category,
+                price: Number(req.body.price), 
+                //size: Number(req.body.size),
+        })
+             */
             res.redirect('products')
         },
 

@@ -43,5 +43,14 @@
   "password": "$2a$10$Pa3kBFojwuWIX4xskrOhPecNyBRrorvqMuTmG9kNVr3Mw7Vkug8Tu",
   "category": "vendedor",
   "avatar": "1675441819805_img.jpg"
+ },
+ {
+  "id": 6,
+  "first_name": "Augusto",
+  "last_name": "Vidal",
+  "email": "vidalaugusto47@gmail.com",
+  "password": "$2a$10$R/pIo6rOH5p2QpHfmEOsZufAn1luHSyLh2RIa078eeh.FZ/MKsWyW",
+  "category": "comprador",
+  "avatar": "1675799297963_img.png"
  }
 ]
