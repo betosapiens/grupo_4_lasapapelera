@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "lasapapeleraDB",
+    "database": "lasapapelera",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "port": "3306"

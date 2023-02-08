@@ -119,13 +119,6 @@
   "price": 1
  },
  {
-  "id": 18,
-  "name": "2",
-  "description": "2",
-  "image": "1675802436520_img.jpg",
-  "price": 2
- },
- {
   "id": 19,
   "name": "0",
   "description": "0",
@@ -133,17 +126,24 @@
   "price": 0
  },
  {
-  "id": 20,
-  "name": "4",
-  "description": "4",
-  "image": "1675802653352_img.jpg",
-  "price": 4
+  "name": "Papel de cocina",
+  "description": "sjdjdhs",
+  "image": "1675869634152_img.jpg"
  },
  {
-  "id": 21,
-  "name": "7",
-  "description": "7",
-  "image": "1675802717991_img.jpg",
-  "price": 7
+  "name": "Papel de Cocina",
+  "description": "Papel de cocina",
+  "image": "1675879371852_img.jpg"
+ },
+ {
+  "name": "Bolsa ",
+  "description": "dsfs",
+  "image": "1675879449816_img.jpg"
+ },
+ {
+  "name": "Formulario de plástico",
+  "description": "Formulario para crear",
+  "price": 1000,
+  "image": "1675880133679_img.jpg"
  }
 ]

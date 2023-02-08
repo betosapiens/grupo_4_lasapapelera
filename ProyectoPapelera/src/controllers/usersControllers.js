@@ -5,9 +5,12 @@ const usersModel = require('../data/jsonTable');
 const { validationResults } = require("express-validator")
 const bcryptjs = require("bcryptjs")
 
+//Aquí requiero la Base  de Datos.
+const db = require('../database/models/');
 
+//Aquí hago la asociación al módelo correspondiente
+const User = db.User;
 //const app = express();
-
 
 const controller = {
 	index: (req, res) => {
@@ -30,9 +33,11 @@ const controller = {
 
     },
 
+    
     login: (req, res) => {
         res.render("login")
     },
+
 
     loginProcess: (req, res) => {
         

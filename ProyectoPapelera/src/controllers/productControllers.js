@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-const db = require('../../database/models/Product');
+const db = require('../database/models');
+const Product = db.Product;
+const Category = db.Category;
+//Aqui hacen esto para lograr activalos operadores en sus querys (like - count - max) 
+const Op = db.Sequelize.Op;
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -10,20 +14,45 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
     
 let Controllers= {
      index: (req,res) => {
-        res.render('products', {products})
+        Product.findAll({
+            include : [{association : 'category'}]
+        })   
+        .then(relojes =>{
+            //return res.send(relojes);
+            //res.render(path.resolve(__dirname, '..', 'views', 'admin', 'administrar'),{relojes});
+            res.render('products', {products})
+        })
+        .catch(error => res.send(error))
+
+      
 }, 
     detail: (req,res) => {
-        let id= req.params.id
-        let product= products.find(products=>products.id == id)
+       // let id= req.params.id
+        //let product= products.find(products=>products.id == id)
+        Product.findByPk(req.params.id, {
+            include : [{association : 'category'}]
+        })  
         
-        res.render('productDetail',{product})
+        .then(product =>{
+            //res.render(path.resolve(__dirname, '..','views','admin','detail'), {miReloj})
+            res.render('productDetail',{product})
+
+        })  
+        .catch(error => res.send(error))
+
+
+      
         
       
 },
 
 create: (req, res) => {
-
-    res.render('productCreate')
+    Category.findAll()
+    .then(categorias =>{
+        // res.render(path.resolve(__dirname, '..','views','admin','create'), {categorias});
+        res.render('productCreate')
+    } )
+  
 },
 
 store: (req, res) => {
@@ -35,59 +64,74 @@ store: (req, res) => {
     const biggestId = lastProduct ? lastProduct.id : 0;
     const newId = biggestId + 1;
  
-    let nuevoProducto= {
-                id: newId,
+    const _body= {
+              
                 name: req.body.name,
                 description: req.body.description,
-                image: req.file.filename,
-                //category: req.body.category,
                 price: Number(req.body.price), 
-                //size: Number(req.body.size),
-                
+                discount: req.body.descuento,
+                image : req.file.filename,
+                categoryId : req.body.categoria 
             }
-            products.push(nuevoProducto);
+            products.push(_body);
             //console.log(nuevoProducto)
     
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')),
-
-            console.log(db.create)
-
-       /*      db.products.create({
-                name: req.body.name,
-                description: req.body.description,
-                image: req.file.filename,
-                //category: req.body.category,
-                price: Number(req.body.price), 
-                //size: Number(req.body.size),
-        })
-             */
-            res.redirect('products')
+          
+            Product.create(_body)
+            .then(product =>{
+                res.redirect('products');
+            })
+            .catch(error => res.send(error))
         },
-
-
+    
 //Item 7 de sprint 3. Edición de productos
     edit:function (req,res){
        let productsId= req.params.id
        let editarProducto = products.find(product=> product.id == productsId );
         
-       res.render("productEdit", {editarProducto});
-    },
-
-
-	
+    //    const categorias = Category.findAll()
+    //    const productos= Product.findByPk(req.params.id,{
+    //        include : [{association : 'category'}]
+    //    })
+    //    Promise.all([productos,categorias])  
+    //    .then( ([editarProducto, categorias]) =>{
+    //        //return res.send(categorias);
+    //       // res.render(path.resolve(__dirname, '..','views','admin','edit'), {relojEditar, categorias})
+    //       res.render("productEdit", {editarProducto});
+    //     })  
+    //    .catch(error => res.send(error))        
+   },
+    
 
     update: (req, res) => {
         
             const productsId = req.params.id;
             const product = products.find(product => product.id == productsId);
-           
-            product.name = req.body.name;
-            product.description = req.body.description;
-            product.price = req.body.price;
-
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+            // product.name = req.body.name;
+            // product.description = req.body.description;
+            // product.price = req.body.price;
+
+            Product.update ({
+                id: newId,
+                name:req.body.nombre,
+                price: req.body.precio,
+                description : req.body.descripcion,
+                discount: req.body.descuento,
+                image: req.file ? req.file.filename : req.body.oldImagen,
+                categoryId : req.body.categoria
+            }, {
+                where: {
+                    id:req.params.id
+               }
+            })
+            .then(()=> res.redirect('products'))
+            .catch(error =>res.send(error))
+
+          //fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
             //Redirigimos al usuario a la lista de productos
-            res.redirect('products');
+            //res.redirect('products');
       
         },
         delete: (req, res) => {
@@ -96,8 +140,6 @@ store: (req, res) => {
                 const product = products.find(product => product.id == id);
                 res.render('productDelete', { product });
         },
-
-
 
         destroy: (req, res) => {
             
@@ -110,9 +152,16 @@ store: (req, res) => {
             //Escribimos el nuevo array de productos en el archivo JSON
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
             //Redirigimos al usuario a la lista de productos
-            
+            Product.destroy({
+                where: {
+                    id : req.params.id
+                }
+            })
+            .then(()=>  res.redirect('/products'))
+            .catch(error => res.send(error))
+
             res.redirect('/products');
         }
+    
     }
-
-module.exports= Controllers;
+module.exports= Controllers
