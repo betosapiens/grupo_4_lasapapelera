@@ -12,6 +12,8 @@ const authMiddleware = require('../middlewares/authMiddleware');
 
 //Formulario de registro
 router.get('/register', guestMiddleware, usersControllers.index);
+router.get('/edit/:id', guestMiddleware, usersControllers.edit);
+router.post('/edit/:id', guestMiddleware, usersControllers.update);
 
 //Proceso de registro
 router.post('/register', uploadFile.single("avatar"), usersControllers.store);

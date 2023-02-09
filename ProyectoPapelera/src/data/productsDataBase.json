@@ -1,141 +1,14 @@
 [
  {
-  "name": "Cartoneria",
-  "description": "description",
-  "price": 47,
-  "image": "cartoneria.jpg",
-  "id": 2
- },
- {
-  "name": "Papeles",
-  "description": "description",
-  "price": 27.5,
-  "image": "papeles.jpeg",
-  "id": 3
- },
- {
-  "name": "Servilletas",
-  "description": "description",
-  "price": 37.5,
-  "image": "servilletas.jpeg",
-  "id": 4
- },
- {
-  "id": 5,
-  "name": "GUANTES ",
-  "description": "GUANTES DE GOMA ",
-  "image": "1675454546460_img.jpg",
-  "price": 99999
- },
- {
-  "id": 6,
-  "name": "sdadad",
-  "description": "qdqdqwe",
-  "image": "1675800736750_img.png",
-  "price": 12123123
- },
- {
-  "id": 8,
-  "name": "Guanrteaw",
-  "description": "asasdasd",
-  "image": "1675801750472_img.jpg",
-  "price": 1
- },
- {
-  "id": 9,
-  "name": "asdasd",
-  "description": "ASas",
-  "image": "1675801824627_img.png",
-  "price": 3213
- },
- {
-  "id": 10,
-  "name": "sdfsdf",
-  "description": "dasdadasd",
-  "image": "1675801859521_img.jpg",
-  "price": 56675
- },
- {
-  "id": 11,
-  "name": "sdsfsdf",
-  "description": "wrewerwer",
-  "image": "1675802035791_img.jpg",
-  "price": 234
- },
- {
-  "id": 12,
-  "name": "asdad",
-  "description": "asdasd",
-  "image": "1675802130232_img.jpg",
-  "price": 213
- },
- {
-  "id": 13,
-  "name": "asdad",
-  "description": "asdasd",
-  "image": "1675802170000_img.jpg",
-  "price": 213
- },
- {
-  "id": 14,
-  "name": "asdad",
-  "description": "asdasd",
-  "image": "1675802216096_img.jpg",
-  "price": 213
- },
- {
-  "id": 15,
-  "name": "prueba ",
-  "description": "asdasd",
-  "image": "1675802295688_img.png",
-  "price": 2
- },
- {
-  "id": 16,
-  "name": "qweqwe",
-  "description": "123",
-  "image": "1675802361469_img.jpg",
-  "price": 123
- },
- {
-  "id": 17,
-  "name": "11",
-  "description": "11",
-  "image": "1675802403331_img.jpg",
-  "price": 1
- },
- {
-  "id": 19,
-  "name": "0",
-  "description": "0",
-  "image": "1675802498843_img.jpg",
-  "price": 0
- },
- {
-  "name": "Papel de cocina",
-  "description": "sjdjdhs",
-  "image": "1675869634152_img.jpg"
- },
- {
-  "name": "Papel de Cocina",
-  "description": "Papel de cocina",
-  "image": "1675879371852_img.jpg"
- },
- {
-  "name": "Bolsa ",
-  "description": "dsfs",
-  "image": "1675879449816_img.jpg"
- },
- {
-  "name": "Formulario de plástico",
-  "description": "Formulario para crear",
+  "name": "Bandeja de cartón para panaderías",
+  "description": "Bandeja de 12cm x 8cm para panaderías",
   "price": 1000,
-  "image": "1675880133679_img.jpg"
+  "image": "1675985845616_img.jpeg"
  },
  {
-  "name": "Servilletas de carton",
-  "description": "fggf",
+  "name": "Papel de Aluminio",
+  "description": "Papel de Aluminio alta resistencia para cocina",
   "price": 1000,
-  "image": "1675890113424_img.jpg"
+  "image": "1675985900265_img.jpeg"
  }
 ]

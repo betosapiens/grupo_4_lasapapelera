@@ -5,15 +5,15 @@
 <%- include('./partials/header') %>
 
 <body>
-
+<h1>Editar Usuario</h1>
 	<div class="container" style="margin-top: 40px;">
 		<div class="row">
 			<div class="col-md-3">
-				<h2>Hola <%= user.firstName + " " + user.lastName %> </h2>
+				<h2>Hi <%= userEdit.firstName + " " + userEdit.lastName %> </h2>
 				<img src="/images/users/<%= user.avatar %> " width="400">
 				<br>
 				<br>
-				<div class="alert alert-success"><%= user.email %> </div>
+				<div class="alert alert-success"><%= userEdit.email %> </div>
 			</div>
 		</div>
 	</div>

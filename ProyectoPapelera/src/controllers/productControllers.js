@@ -24,6 +24,16 @@ let Controllers= {
         })
         .catch(error => res.send(error))
 
+    },
+        list: (req,res) => {
+            Product.findAll()  
+            .then(products =>{
+              
+                res.render('productsList', {products})
+            })
+            .catch(error => res.send(error))
+      
+
       
 }, 
     detail: (req,res) => {
@@ -38,11 +48,7 @@ let Controllers= {
             res.render('productDetail',{product})
 
         })  
-        .catch(error => res.send(error))
-
-
-      
-        
+        .catch(error => res.send(error))       
       
 },
 
@@ -126,7 +132,7 @@ store: (req, res) => {
                     id:req.params.id
                }
             })
-            .then(()=> res.redirect('products'))
+            .then(()=> res.redirect('/products'))
             .catch(error =>res.send(error))
 
           //fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));

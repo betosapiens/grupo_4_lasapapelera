@@ -14,7 +14,7 @@ router.get('/detail/:id', productControllers.detail)
 
 //Rutas de edición de productos/ 
 router.get('/edit/:id', productControllers.edit); 
-router.put('/edit/:id', uploadFile.single("image"), productControllers.update)
+router.post('/edit/:id', uploadFile.single("image"), productControllers.update)
 
 //Rutas de eliminación de productos
 router.get('/delete/:id', productControllers.delete);

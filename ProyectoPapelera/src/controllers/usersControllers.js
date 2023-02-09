@@ -17,6 +17,17 @@ const controller = {
         res.cookie("testing", "Hola mundo!", {maxAge: 1000 * 30 })
 		res.render('register')
 	},	
+    list: (req,res) => {
+        User.findAll()  
+        .then(products =>{
+          
+            res.render('userList', {products})
+        })
+        .catch(error => res.send(error))
+  
+},
+
+
 
 	store: (req, res) => {   
        
@@ -35,15 +46,48 @@ const controller = {
         })
         .catch(error => console.log(error));
     
-
-
         let userId = usersModel.create(userToCreate);
 
         res.redirect('/' ) + userId;
 
     },
+    edit:function (req,res){
+        //let productsId= req.params.id
+         //let editarProducto = products.find(product=> product.id == productsId );
 
-    
+         User.findByPk(req.params.id)
+         .then( ([user]) =>{
+             //return res.send(categorias);
+             //res.render(path.resolve(__dirname, '..','views','admin','edit'), {relojEditar, categorias})
+             res.render("productEdit", {user});
+         
+          })  
+         .catch(error => res.send(error))        
+     },
+  
+
+
+	update: (req, res) => {   
+       
+        let userToEdit = {
+			firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            avatar: req.file.filename
+			
+		}
+    User
+    .create(userToEdit)
+    .then((storedUser) => {
+        return  res.redirect('/login');
+    })
+    .catch(error => console.log(error));
+
+    let userId = usersModel.create(userToEdit);
+
+    res.redirect('/edit' ) + userId;
+
+},  
     login: (req, res) => {
         res.render("login")
     },

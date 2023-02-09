@@ -105,5 +105,19 @@
   "email": "dibuuu@gmail.com",
   "password": "$2a$10$AnR3mx03Y53i07xJNkASrOZSdMwnmSsBn6CPie85Sd6rQDnTkQYAW",
   "avatar": "1675899707136_img.jpg"
+ },
+ {
+  "id": 14,
+  "email": "scaloneta@gmail.com",
+  "password": "$2a$10$oHmYAtCVfr/NfSX1HiHt1ur7RCqkpv/QR7Cq.Zzs0N88jZQcVmkYm",
+  "avatar": "1675983310404_img.jpg"
+ },
+ {
+  "id": 15,
+  "firstName": "Jorge",
+  "lastName": "Bergoglio",
+  "email": "elpapa@gmail.com",
+  "password": "$2a$10$qMWKVRTE35QLYipZHjnEnOuuNtwHsuYrT5dTR4LmkPj0i9oeCcS6m",
+  "avatar": "1675984167673_img.jpeg"
  }
 ]
