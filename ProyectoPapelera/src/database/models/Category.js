@@ -9,13 +9,13 @@ module.exports = (sequelize,DataTypes) => {
         },
         name: DataTypes.STRING,
     }
-    /*
+    
     let config ={
         tableName: 'products',
-        timestamps: true
+        timestamps: false
     }
-    */
-    const Category = sequelize.define(alias, cols);
+    
+    const Category = sequelize.define(alias, cols, config);
     Category.associate = function(models){
         Category.hasMany(models.Product, {
             as : 'products',

@@ -52,5 +52,58 @@
   "password": "$2a$10$R/pIo6rOH5p2QpHfmEOsZufAn1luHSyLh2RIa078eeh.FZ/MKsWyW",
   "category": "comprador",
   "avatar": "1675799297963_img.png"
+ },
+ {
+  "id": 7,
+  "first_name": "Juan",
+  "last_name": "Pepepepepe",
+  "email": "pepe@gmail.com",
+  "password": "$2a$10$xFMKstWcQxNGeBhGHpAi6.XLBiWGwMCJByfvn4OscBmw7Q3ZIbKpG",
+  "category": "comprador",
+  "avatar": "1675887677371_img.JPG"
+ },
+ {
+  "id": 8,
+  "first_name": "José",
+  "last_name": "Papa",
+  "email": "papa@gmail.com",
+  "password": "$2a$10$hhjF4f1ptDlCRtXsZQwPseA/Uumig84DSzWPHbYGLBwCl6nD0/hHq",
+  "category": "comprador",
+  "avatar": "1675897648017_img.jpg"
+ },
+ {
+  "id": 9,
+  "first_name": "lalala",
+  "last_name": "COCOC",
+  "email": "lalala@gmail.com",
+  "password": "$2a$10$Sxs8f0elYvspmCAke4QiQ.7.ESIVmfmu8I3J0ClZAYoZ4OIlV4BAG",
+  "category": "vendedor",
+  "avatar": "1675897820817_img.jpg"
+ },
+ {
+  "id": 10,
+  "email": "jupaperrotti@gmail.com",
+  "password": "$2a$10$kYDEVeGBxtxF.OF32nHw0.0dnr00uqUmJNQ7Goaah1l/n4sp7f4d.",
+  "avatar": "1675899314942_img.jpg"
+ },
+ {
+  "id": 11,
+  "email": "diegote@gmail.com",
+  "password": "$2a$10$/iPYkNhrNjkdlf1PrYuaGuRY0pveINHL953W4jghTMAS/iN.xMPPa",
+  "avatar": "1675899411908_img.jpg"
+ },
+ {
+  "id": 12,
+  "first_name": "Leo",
+  "last_name": "Messi",
+  "email": "lio10@gmail.com",
+  "password": "$2a$10$cNV9cfg5ZGILgunPQAXjh.15mQlHfVdnzA2d8W8HhhdBTm3x2ryBq",
+  "avatar": "1675899606640_img.jpg"
+ },
+ {
+  "id": 13,
+  "email": "dibuuu@gmail.com",
+  "password": "$2a$10$AnR3mx03Y53i07xJNkASrOZSdMwnmSsBn6CPie85Sd6rQDnTkQYAW",
+  "avatar": "1675899707136_img.jpg"
  }
 ]

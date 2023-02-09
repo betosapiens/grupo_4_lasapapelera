@@ -17,7 +17,7 @@ let Controllers= {
         Product.findAll({
             include : [{association : 'category'}]
         })   
-        .then(relojes =>{
+        .then(products =>{
             //return res.send(relojes);
             //res.render(path.resolve(__dirname, '..', 'views', 'admin', 'administrar'),{relojes});
             res.render('products', {products})
@@ -87,40 +87,40 @@ store: (req, res) => {
     
 //Item 7 de sprint 3. Edición de productos
     edit:function (req,res){
-       let productsId= req.params.id
-       let editarProducto = products.find(product=> product.id == productsId );
-        
-    //    const categorias = Category.findAll()
-    //    const productos= Product.findByPk(req.params.id,{
-    //        include : [{association : 'category'}]
-    //    })
-    //    Promise.all([productos,categorias])  
-    //    .then( ([editarProducto, categorias]) =>{
-    //        //return res.send(categorias);
-    //       // res.render(path.resolve(__dirname, '..','views','admin','edit'), {relojEditar, categorias})
-    //       res.render("productEdit", {editarProducto});
-    //     })  
-    //    .catch(error => res.send(error))        
+      //let productsId= req.params.id
+       //let editarProducto = products.find(product=> product.id == productsId );
+       const categorias = Category.findAll()
+       const productos = Product.findByPk(req.params.id,{
+           include : [{association : 'category'}]
+       })
+
+       Promise.all([productos,categorias])  
+       .then( ([editarProducto, categorias]) =>{
+           //return res.send(categorias);
+           //res.render(path.resolve(__dirname, '..','views','admin','edit'), {relojEditar, categorias})
+           res.render("productEdit", {editarProducto, categorias});
+       
+        })  
+       .catch(error => res.send(error))        
    },
-    
+
 
     update: (req, res) => {
         
-            const productsId = req.params.id;
-            const product = products.find(product => product.id == productsId);
+            //const productsId = req.params.id;
+            //const product = products.find(product => product.id == productsId);
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
             // product.name = req.body.name;
             // product.description = req.body.description;
             // product.price = req.body.price;
 
             Product.update ({
-                id: newId,
-                name:req.body.nombre,
-                price: req.body.precio,
-                description : req.body.descripcion,
-                discount: req.body.descuento,
-                image: req.file ? req.file.filename : req.body.oldImagen,
-                categoryId : req.body.categoria
+
+                name: req.body.name,
+                price: req.body.price,
+                description : req.body.description,
+                imagen: req.file ? req.file.filename : req.body.oldImagen,
+               // categoryId : req.body.categoria
             }, {
                 where: {
                     id:req.params.id
@@ -159,8 +159,6 @@ store: (req, res) => {
             })
             .then(()=>  res.redirect('/products'))
             .catch(error => res.send(error))
-
-            res.redirect('/products');
         }
     
     }

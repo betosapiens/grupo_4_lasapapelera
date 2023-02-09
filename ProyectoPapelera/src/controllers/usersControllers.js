@@ -21,11 +21,21 @@ const controller = {
 	store: (req, res) => {   
        
         let userToCreate = {
-			...req.body,
+			firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.email,
 			password: bcryptjs.hashSync(req.body.password, 10),
             avatar: req.file.filename
 			
 		}
+        User
+        .create(userToCreate)
+        .then((storedUser) => {
+            return  res.redirect('/login');
+        })
+        .catch(error => console.log(error));
+    
+
 
         let userId = usersModel.create(userToCreate);
 
@@ -89,7 +99,7 @@ const controller = {
         req.session.destroy()
         console.log(req.session)
         return res.redirect('/');
-    } 
-};
+    }
+}
 
 module.exports = controller;

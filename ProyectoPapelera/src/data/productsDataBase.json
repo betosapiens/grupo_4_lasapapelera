@@ -1,12 +1,5 @@
 [
  {
-  "name": "Bolsas",
-  "description": "description",
-  "price": 500,
-  "image": "bolsas.jpeg",
-  "id": 1
- },
- {
   "name": "Cartoneria",
   "description": "description",
   "price": 47,
@@ -40,13 +33,6 @@
   "description": "qdqdqwe",
   "image": "1675800736750_img.png",
   "price": 12123123
- },
- {
-  "id": 7,
-  "name": "asdasdas",
-  "description": "asdadasd",
-  "image": "1675801029367_img.png",
-  "price": null
  },
  {
   "id": 8,
@@ -145,5 +131,11 @@
   "description": "Formulario para crear",
   "price": 1000,
   "image": "1675880133679_img.jpg"
+ },
+ {
+  "name": "Servilletas de carton",
+  "description": "fggf",
+  "price": 1000,
+  "image": "1675890113424_img.jpg"
  }
 ]

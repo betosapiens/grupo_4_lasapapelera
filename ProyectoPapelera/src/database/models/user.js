@@ -13,12 +13,12 @@ module.exports = (sequelize, dataTypes) => {
       avatar: dataTypes.STRING,
       role: dataTypes.INTEGER
   };
-  /*let config = {
+  let config = {
       tableName: 'users',
       timestamps: false
-  };*/
+  };
       
   
-  const User = sequelize.define(alias, cols)
+  const User = sequelize.define(alias, cols, config)
   return User;
 }

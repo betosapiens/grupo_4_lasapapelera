@@ -10,18 +10,17 @@ module.exports = (sequelize,DataTypes) => {
         name: DataTypes.STRING,
         description: DataTypes.STRING,
         price : DataTypes.DECIMAL,
-        discount: DataTypes.INTEGER,
         image: DataTypes.STRING,
         categoryId: DataTypes.INTEGER
     }
-    /*
+    
     let config ={
         tableName: 'products',
-        timestamps: true,
-        underscore: true
+        timestamps: false,
+   
     }
-    */
-    const Product = sequelize.define(alias, cols);
+    
+    const Product = sequelize.define(alias, cols,config);
     Product.associate = function(models){
         Product.belongsTo(models.Category, {
             as : 'category',
