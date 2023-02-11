@@ -17,13 +17,26 @@
 <p class="parrafo-form">Registrarse tarda solo unos segundos y otorga acceso a todo nuestro catálogo</p>
 </div>
 </div>
-
+<div class="errores">
+    <ul></ul>
+</div>
 <form action="/user/register" method="POST"  enctype="multipart/form-data">
 
     <div class="field">
         <label for="firstName">Nombre</label>
         <div class="control">
-            <input type="text" name="firstName" id="firstName">
+            <input 
+            type="text" 
+            name="firstName" 
+            class="form-control <%= locals.errors && errors.firstName ? 'is-invalid' : null %>"
+            value="<%= locals.oldData ? oldData.firstName : null %>"
+        >
+        <% if (locals.errors && errors.firstName) { %>
+            <div class="text-danger">
+                <%= errors.firstName.msg %>
+            </div>
+        <% } %>  	
+</div>
         </div>
         <p class="feedback"></p>
     </div>
@@ -31,7 +44,18 @@
      <div class="field">
         <label for="lastName">Apellido</label>
         <div class="control">
-            <input type="text" name="lastName" id="lastName">
+            <input 
+            type="text" 
+            name="lastName" 
+            class="form-control <%= locals.errors && errors.lastName ? 'is-invalid' : null %>"
+            value="<%= locals.oldData ? oldData.lastName : null %>"
+        >
+        <% if (locals.errors && errors.lastName) { %>
+            <div class="text-danger">
+                <%= errors.lastName.msg %>
+            </div>
+        <% } %>
+</div>
         </div>
         <p class="feedback"></p>
     </div>
@@ -39,7 +63,18 @@
     <div class="field">
         <label for="email">Email</label>
         <div class="control">
-            <input type="text" name="email" id="email">
+            <input 
+            type="text" 
+            name="email" 
+            class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+            value="<%= locals.oldData ? oldData.email : null %>"
+        >
+        <% if (locals.errors && errors.email) { %>
+            <div class="text-danger">
+                <%= errors.email.msg %>
+            </div>
+        <% } %>
+</div>
         </div>
         <p class="feedback"></p>
     </div>
@@ -47,14 +82,33 @@
     <div class="field">
         <label for="password">Password</label>
         <div class="control">
-            <input type="password" name="password" id="password">
+            <input 
+            type="password" 
+            name="password" 
+            class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+        >
+        <% if (locals.errors && errors.password) { %>
+            <div class="text-danger">
+                <%= errors.password.msg %>
+            </div>
+        <% } %>
+</div>
         </div>
         <p class="feedback"></p>
     </div>
 
     <div>
         <label><b>Imagen de perfil</b></label>
-        <input class="" type="file" name="avatar"> 
+        <input 
+        type="file" 
+        name="avatar"
+        class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
+    >
+    <% if (locals.errors && errors.avatar) { %>
+        <div class="text-danger">
+            <%= errors.avatar.msg %>
+        </div>
+    <% } %>
     </div>
 
     <div class="field">
@@ -69,7 +123,7 @@
         <p class="feedback"></p>
     </div>
 
- -->
+ 
     <div class="field">
         <div class="control">
             <button type="submit">Crear usuario</button>
@@ -77,5 +131,7 @@
     </div>
 
  </form>
+ <script src="/js/register.js"></script> 
+ <script src="/js/register2.js"></script> 
  </body>
  </html>

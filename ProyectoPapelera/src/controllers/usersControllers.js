@@ -2,13 +2,8 @@
 //const path = require('path');
 const usersModel = require('../data/jsonTable');
 //const usersModel = jsonTable('users');
-const { validationResults } = require("express-validator")
-const bcryptjs = require("bcryptjs")
-
-//Aquí requiero la Base  de Datos.
-const db = require('../database/models/');
-
-//Aquí hago la asociación al módelo correspondiente
+const { validationResult } = require("express-validator")
+const db = require('../database/models');
 const User = db.User;
 //const app = express();
 
@@ -17,17 +12,19 @@ const controller = {
         res.cookie("testing", "Hola mundo!", {maxAge: 1000 * 30 })
 		res.render('register')
 	},	
-    list: (req,res) => {
-        User.findAll()  
-        .then(products =>{
-          
-            res.render('userList', {products})
-        })
-        .catch(error => res.send(error))
-  
-},
-
-
+	register: (req, res) => {
+		return res.render('register');
+	},
+	processRegister: (req, res) => {
+		const resultValidation = validationResult(req);
+		
+		if (resultValidation.errors.length > 0) {
+			return res.render('register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+    },
 
 	store: (req, res) => {   
        
@@ -94,8 +91,20 @@ const controller = {
 
 
     loginProcess: (req, res) => {
+        const resultValidation = validationResult(req);
+		
+
+		if (resultValidation.errors.length > 0) {
+			return res.render('login', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+    
         
        let userToLogin = usersModel.findByField('email', req.body.email);
+		
+		
         
        if (userToLogin) { 
         let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
@@ -114,20 +123,33 @@ const controller = {
         return res.render('login', {
             errors: {
                 email: {
-                    msg: 'Contrasena incorrecta'
+                    msg: 'Contraseña incorrecta',
+                
                 }
             }
         });
+
         
        }
 
        return res.render('login', {
         errors: {
             email: {
+                msg: "Debes completar con un email",
                 msg: "No se encuentra este email en la base de datos"
             }
         }
        })
+    },
+	processLogin: (req, res) => {
+		const resultValidation = validationResult(req);
+		
+		if (resultValidation.errors.length > 0) {
+			return res.render('register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
     },
 
     profile: (req, res) => {

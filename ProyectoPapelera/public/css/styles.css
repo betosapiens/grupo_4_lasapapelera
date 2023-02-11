@@ -160,7 +160,9 @@ footer {
 /*--------Produc Detail--------*/
 
 
-
+.text-danger{
+  color:red
+}
 
 .container-CenterImage img {
   width: 300px;

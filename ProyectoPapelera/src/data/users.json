@@ -119,5 +119,13 @@
   "email": "elpapa@gmail.com",
   "password": "$2a$10$qMWKVRTE35QLYipZHjnEnOuuNtwHsuYrT5dTR4LmkPj0i9oeCcS6m",
   "avatar": "1675984167673_img.jpeg"
+ },
+ {
+  "id": 16,
+  "firstName": "Leo",
+  "lastName": "Messi",
+  "email": "leo10@gmail.com",
+  "password": "$2a$10$Lk1VpQqGXMPwNL8ganwGMOZQ0n1DThidq84ZOz.uk8K22EQsYTqR6",
+  "avatar": "1676158707925_img.jpg"
  }
 ]
