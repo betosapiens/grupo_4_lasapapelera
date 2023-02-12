@@ -1,11 +1,26 @@
 const express = require('express');
 const productControllers = require('../controllers/productControllers')
+const productAPIControllers = require('../controllers/productAPIControllers')
 const uploadFile = require('../middlewares/multerProductsMiddleware')
 
 const router= express.Router();
 
 
 router.get('/', productControllers.index);
+
+//Rutas de creación de productos API
+router.get('/:id', productAPIControllers.list);
+router.get('/:id', productAPIControllers.show);
+router.get('/:id', productAPIControllers.recomended);
+router.get('/search', productAPIControllers.search);
+
+//router.get('/detail/:id', productAPIControllers.detail)
+router.post('/', productAPIControllers.update);
+router.post('/', productAPIControllers.create);
+router.delete('/:id', productAPIControllers.destroy);
+
+
+
 
 //Rutas de creación de productos /
 router.get('/create', productControllers.create); 

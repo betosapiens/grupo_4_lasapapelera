@@ -163,6 +163,9 @@ footer {
 .text-danger{
   color:red
 }
+.form-control{
+color:red
+}
 
 .container-CenterImage img {
   width: 300px;
