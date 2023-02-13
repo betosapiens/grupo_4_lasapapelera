@@ -1,4 +1,175 @@
-const path = require('path');
+/*const path = require('path');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const moment = require('moment');
+
+const User = db.User;
+
+const usersAPIControllers = {
+    'list': (req, res) => {
+        User.findAll()
+        .then(users => {
+            let respuesta = {
+                meta: {
+                    status : 200,
+                    total: users.length,
+                    url: 'api/users'
+                },
+                data: users
+            }
+                res.json(respuesta);
+            })
+    },
+    'show': (req, res) => {
+        User.findByPk(req.params.id)
+        .then(user => {
+            let respuesta = {
+                meta: {
+                    status : 200,
+                    url: 'api/users/' + req.params.id
+                },
+                data: user
+            }
+            res.json(respuesta);
+        })
+        .catch(error => {
+            let respuesta = {
+                meta: {
+                    status: 500,
+                    message: 'Error al mostrar usuario'
+                },
+                data: error
+            }
+            res.json(respuesta);
+        });
+    },
+    
+    'search': (req, res) => {
+        User.findAll({
+            where: {
+                name: {
+                    [Op.like]: '%' + req.params.name + '%'
+                }
+            }
+        })
+        .then(users => {
+            let respuesta = {
+                meta: {
+                    status : 200,
+                    total: users.length,
+                    url: 'api/users/search/' + req.params.name
+                },
+                data: users
+            }
+            res.json(respuesta);
+        })
+        .catch(error => {
+            let respuesta = {
+                meta: {
+                    status: 500,
+                    message: 'Error al buscar usuarios'
+                },
+                data: error
+            }
+            res.json(respuesta);
+        });
+    },
+
+    'create': (req, res) => {
+        User.create({
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password
+        })
+        .then(user => {
+            let respuesta = {
+                meta: {
+                    status: 201,
+                    message: 'Usuario creado con éxito'
+                },
+                data: user
+            }
+            res.json(respuesta);
+        })
+        .catch(error => {
+            let respuesta = {
+                meta: {
+                    status: 500,
+                    message: 'Error al crear usuario'
+                },
+                data: error
+            }
+            res.json(respuesta);
+        });
+    },
+
+    'update': (req, res) => {
+        User.update({
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(user => {
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    message: 'Usuario actualizado con éxito'
+                },
+                data: user
+            }
+            res.json(respuesta);
+        })
+        .catch(error => {
+            let respuesta = {
+                meta: {
+                    status: 500,
+                    message: 'Error al actualizar usuario'
+                },
+                data: error
+            }
+            res.json(respuesta);
+        });
+    },
+
+    'destroy': (req, res) => {
+        User.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(user => {
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    message: 'Usuario eliminado con éxito'
+                }
+            }
+            res.json(respuesta);
+        })
+        .catch(error => {
+            let respuesta = {
+                meta: {
+                    status: 500,
+                    message: 'Error al eliminar usuario'
+                },
+                data: error
+            }
+            res.json(respuesta);
+        });
+   
+    }
+}
+    
+
+module.exports = usersAPIControllers;
+
+
+/*const path = require('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
@@ -17,7 +188,7 @@ const usersAPIControllers = {
             let respuesta = {
                 meta: {
                     status : 200,
-                    total: users.length,
+                    total: users,
                     url: 'api/users'
                 },
                 data: users
@@ -25,21 +196,21 @@ const usersAPIControllers = {
                 res.json(respuesta);
             })
     },
-    // 'show': (req, res) => {
-    //     db.User.findByPk(req.params.id)
+'show': (req, res) => {
+  db.User.findByPk(req.params.id)
             
-    //         .then(user => {
-    //             let respuesta = {
-    //                 meta: {
-    //                     status: 200,
-    //                     //total: user.length,
-    //                     url: '/api/user/:id'
-    //                 },
-    //                 data: user
-    //             }
-    //             res.json(respuesta);
-    //         });
-    // },
+       .then(user => {
+            let respuesta = {
+                meta: {
+                   status: 200,
+                   total: user,
+                    url: '/api/user/:id'
+             },
+                  data: user
+               }
+               res.json(respuesta);
+            });
+    },
 
     
     'search': (req, res) => {
@@ -53,7 +224,7 @@ const usersAPIControllers = {
                 let respuesta = {
                     meta: {
                         status: 200,
-                        total: users.length,
+                        total: users,
                         url: '/api/users/:id'
                     },
                     data: users
@@ -68,24 +239,6 @@ const usersAPIControllers = {
             });
     },
         
-    // 'detail': (req, res) => {
-    //     db.Movie.findByPk(req.params.id,
-    //         {
-    //             include : ['genre']
-    //         })
-    //         .then(movie => {
-    //             let respuesta = {
-    //                 meta: {
-    //                     status: 200,
-    //                     total: movie.length,
-    //                     url: '/api/movie/:id'
-    //                 },
-    //                 data: movie
-    //             }
-    //             res.json(respuesta);
-    //         });
-    // },
-
     
     create: (req,res) => {
         User
@@ -195,3 +348,114 @@ const usersAPIControllers = {
 }
 
 module.exports = usersAPIControllers;
+
+const path = require('path');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const moment = require('moment');
+
+const User = db.User;
+
+const usersAPIController = {
+    'list': (req, res) => {
+        User.findAll()
+        .then(users => {
+            let respuesta = {
+                meta: {
+                    status : 200,
+                    total: users.length,
+                    url: 'api/users'
+                },
+                data: users
+            }
+                res.json(respuesta);
+            })
+    },
+
+    'create': (req, res) => {
+        User.create({
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password
+        })
+        .then(user => {
+            let respuesta = {
+                meta: {
+                    status: 201,
+                    message: 'Usuario creado con éxito'
+                },
+                data: user
+            }
+            res.json(respuesta);
+        })
+        .catch(error => {
+            let respuesta = {
+                meta: {
+                    status: 500,
+                    message: 'Error al crear usuario'
+                },
+                data: error
+            }
+            res.json(respuesta);
+        });
+    },
+
+    'update': (req, res) => {
+        User.update({
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(user => {
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    message: 'Usuario actualizado con éxito'
+                },
+                data: user
+            }
+            res.json(respuesta);
+        })
+        .catch(error => {
+            let respuesta = {
+                meta: {
+                    status: 500,
+                    message: 'Error al actualizar usuario'
+                },
+                data: error
+            }
+            res.json(respuesta);
+        });
+    },
+
+    'destroy': (req, res) => {
+        User.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(user => {
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    message: 'Usuario eliminado con éxito'
+                }
+            }
+            res.json(respuesta);
+        })
+        .catch(error => {
+            let respuesta = {
+                meta: {
+                    status: 500,
+                    message: 'Error al eliminar usuario'
+                },
+                data: error
+            }
+            res.json(respuesta);
+        });
+   */

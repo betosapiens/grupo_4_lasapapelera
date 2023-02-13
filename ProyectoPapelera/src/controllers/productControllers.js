@@ -142,10 +142,11 @@ store: (req, res) => {
         },
         delete: (req, res) => {
        
-                const id = req.params.id;
-                const product = products.find(product => product.id == id);
-                res.render('productDelete', { product });
-        },
+            const id = req.params.id;
+            const product = products.find(product => product.id == id);
+            res.render('productDelete', { product });
+    },
+        
 
         destroy: (req, res) => {
             

@@ -236,6 +236,11 @@ color:red
   background-color: yellowgreen;
 }
 
+.products{
+  display:flex;
+  justify-content: flex-start;
+}
+
 /*-------------ProductCart---------------
 
 header {

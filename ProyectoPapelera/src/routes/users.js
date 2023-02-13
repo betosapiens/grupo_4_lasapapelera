@@ -42,13 +42,13 @@ return true;
 ]
 
  //Api
-// router.get('/:id', usersAPIControllers.show)
- router.get('/', usersAPIControllers.list)
+/*router.get('/:id', usersAPIControllers.show)
+router.get('/', usersAPIControllers.list)
 router.get('/search', usersAPIControllers.search);
 //router.get('/detail/:id', productAPIControllers.detail)
 router.post('/', usersAPIControllers.create);
 router.post('/', usersAPIControllers.update);
-router.delete('/:id', usersAPIControllers.destroy);
+router.delete('/:id', usersAPIControllers.destroy);*/
 
 
 //Formulario de registro

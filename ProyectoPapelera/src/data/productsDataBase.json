@@ -10,5 +10,95 @@
   "description": "Papel de Aluminio alta resistencia para cocina",
   "price": 1000,
   "image": "1675985900265_img.jpeg"
+ },
+ {
+  "name": "Bandeja Fast Food",
+  "description": "Bandeja Fast Food color azul",
+  "price": 580,
+  "image": "1676213752159_img.jpg"
+ },
+ {
+  "name": "Papel Higiénico Totem 4x100",
+  "description": "Papel Higiénico Marca Totem, 4 rollos por 100 metros cada uno.",
+  "price": 600,
+  "image": "1676214014168_img.jpg"
+ },
+ {
+  "name": "Bolsa Kp",
+  "description": "Bolsa Kp 10 50x50x18",
+  "price": 180,
+  "image": "1676214124197_img.jpg"
+ },
+ {
+  "name": "CajasCartón42x35x35",
+  "description": "Cajas de Cartón, medidas 42x35x35, color beige.",
+  "price": 223,
+  "image": "1676214365268_img.jpg"
+ },
+ {
+  "name": "CajasDeCartón30x20x20",
+  "description": "Cajas de cartón, medidas 30x20x20, color beige",
+  "price": 0,
+  "image": "1676214487350_img.jpg"
+ },
+ {
+  "name": "CajasDeCartón60x40x20",
+  "description": "Cajas de cartón, medidas 60x40x29",
+  "price": 250,
+  "image": "1676214621313_img.jpg"
+ },
+ {
+  "name": "Vaso de Plástico Rígido 500Cc",
+  "description": "Vaso de Plástico Rígido, Vaso 500 Cc Pp X100 Unidades",
+  "price": 4000,
+  "image": "1676214871098_img.jpg"
+ },
+ {
+  "name": "Plato Cuadrado",
+  "description": "Plato cuadrado de plástico, varios colores(violeta, rojo, amarillo, azul, blanco, verde)",
+  "price": 50,
+  "image": "1676215057580_img.jpg"
+ },
+ {
+  "name": "Tenedor Blanco/Cristal x 1000U",
+  "description": "Tenedor de plástico, descartable, para grandes eventos Consultar por precios minoristas",
+  "price": 3900,
+  "image": "1676215240016_img.jpg"
+ },
+ {
+  "name": "Cuchillo Blanco/Cristal X1000 U",
+  "description": "Cuchillo Blanco/Cristal X1000 U, para grandes eventos. Consultar por precios minoristas",
+  "price": 3900,
+  "image": "1676215342765_img.jpg"
+ },
+ {
+  "name": "Cuchara Blanco/Cristal X1000 U",
+  "description": "Cuchara Blanco/Cristal X1000 U. Para eventos. Consultar por precios minoristas",
+  "price": 3900,
+  "image": "1676215450252_img.jpg"
+ },
+ {
+  "name": "Servilleta 33x33x50",
+  "description": "Servilleta 33x33x50, blanca, celeste, ",
+  "price": 128,
+  "image": "1676215678776_img.jpg"
+ },
+ {
+  "name": "Bolsas Kp 1",
+  "description": "Bolsas Kp 1, varios colores",
+  "price": 80,
+  "image": "1676215897286_img.jpg"
+ },
+ {
+  "name": "Bolsas Kp 1",
+  "description": "Varios colores",
+  "price": 80,
+  "image": "1676216136708_img.jpg"
+ },
+ {
+  "name": "Cintas Rapifix",
+  "description": "Cinta Rapifix Transparente 12x30 C/U",
+  "price": 75,
+  "image": "1676229004302_img.jpg"
  }
 ]

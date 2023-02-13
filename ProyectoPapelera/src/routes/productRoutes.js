@@ -9,15 +9,13 @@ const router= express.Router();
 router.get('/', productControllers.index);
 
 //Rutas de creación de productos API
-router.get('/:id', productAPIControllers.list);
+/*router.get('/:id', productAPIControllers.list);
 router.get('/:id', productAPIControllers.show);
-router.get('/:id', productAPIControllers.recomended);
 router.get('/search', productAPIControllers.search);
-
 //router.get('/detail/:id', productAPIControllers.detail)
 router.post('/', productAPIControllers.update);
 router.post('/', productAPIControllers.create);
-router.delete('/:id', productAPIControllers.destroy);
+router.delete('/:id', productAPIControllers.destroy);*/
 
 
 
