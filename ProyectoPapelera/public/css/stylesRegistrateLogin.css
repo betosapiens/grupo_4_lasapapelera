@@ -5,13 +5,14 @@
 
 }
 .parrafo-form{
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 30px;
+    margin: 10px;
 }
 .titulo-form{
     font-size: 24px;
-    color:#0022AA}
+    margin: 10px;
+    }
 
 .control-formulario{
     margin-bottom: 15px;
@@ -24,15 +25,25 @@
 .control{
     width:40%;
     padding:8px;
-    border-radius: 8px;
+    border: none;
+    
+    border-radius: 24px;
+background: #e0e0e0;
+box-shadow: inset 8px 8px 16px #828282,
+            inset -8px -8px 16px #ffffff;
 }
 .boton-formulario{
-    margin-left: 10px ; 
-    color:#141515;
-    background-color:rgb(17, 173, 221);
+    margin-left: 10px ;
+    border: none; 
+    
+    
    border-radius: 5px;
    margin-bottom: 20px;
-font-size:20px
+font-size:20px;
+border-radius: 12px;
+background: #e0e0e0;
+box-shadow:  5px 5px 10px #828282,
+             -5px -5px 10px #ffffff;
 }
 .boton-formulario:hover{
     background-color:#0022AA;
@@ -41,15 +52,23 @@ font-size:20px
 }
 
 .formulario-de-registro{
-    background-color: #a1dff3;
-    margin-bottom: 200px;
+    
+    padding: 2px;    
+    margin-bottom: 40px;
     text-align: center;
-    margin-bottom: 10px;
-    margin-left: 200px;
-    margin-right: 200px;
-    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 300px;
+    margin-right: 300px;    
+    border-radius: 12px;
+background: #e0e0e0;
+box-shadow: inset 5px 5px 10px #828282,
+            inset -5px -5px 10px #ffffff;
+    
 }
 .olvidaste{
     font-size: 16px;
     font-weight: 600;
+}
+.text-danger{
+    color:red;
 }

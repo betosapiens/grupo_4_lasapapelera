@@ -26,7 +26,7 @@ body('password')
 .isLength({min: 8}).withMessage('La contraseña debe tener un mínimo de 8 caracteres'),
 	body('avatar').custom((value, { req }) => {
 	let file = req.file;
-	let acceptedExtensions = ['.jpg', '.png', '.gif'];
+	let acceptedExtensions = ['.jpg','.jpeg', '.png', '.gif'];
 		
 	if (!file) {
 		throw new Error('Tienes que subir una imagen');

@@ -10,7 +10,7 @@
     </section>
 
 
-    <section>
+    <section  class="nosotros">
       <h1>Nosotros</h1>
       <p>
         Somos una empresa familiar fundada hace 60 años en Ringuelet, La Plata.
@@ -21,14 +21,15 @@
         tercera generación.
       </p>
     </section>
-
+   <div class="productos">
     <% products.forEach(product => { %> 
 
-      <div class="productos">
+      <div>
         <article class="articulos">
          <!-- /* <a href="/products/detail/<%= products.id %>">       */  -->
             <div class="titulares">
               <p><%= product.name %></p>
+
             </div>
             <img src="/images/<%= product.image %>" alt="bolsas" class="imagenes" />
           </a>
@@ -36,7 +37,7 @@
       </div>
 
     <% }) %>
-
+   </div>
     
 
   </body>

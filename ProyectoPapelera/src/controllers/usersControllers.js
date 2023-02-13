@@ -3,6 +3,7 @@
 const usersModel = require('../data/jsonTable');
 //const usersModel = jsonTable('users');
 const { validationResult } = require("express-validator")
+const bcryptjs = require('bcryptjs')
 const db = require('../database/models');
 const User = db.User;
 //const app = express();
@@ -70,6 +71,7 @@ const controller = {
 			firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,
+            password: bcryptjs.hashSync(req.body.password, 10),
             avatar: req.file.filename
 			
 		}
