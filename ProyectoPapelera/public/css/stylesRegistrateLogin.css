@@ -32,6 +32,20 @@ background: #e0e0e0;
 box-shadow: inset 8px 8px 16px #828282,
             inset -8px -8px 16px #ffffff;
 }
+control{
+    width:40%;
+    padding:8px;
+    border: none;
+    
+    border-radius: 24px;
+background: #e0e0e0;
+box-shadow: inset 8px 8px 16px #828282,
+            inset -8px -8px 16px #ffffff;
+    font-size: 10px;
+    color:blue
+}
+
+
 .boton-formulario{
     margin-left: 10px ;
     border: none; 

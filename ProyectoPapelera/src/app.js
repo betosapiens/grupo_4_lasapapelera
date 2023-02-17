@@ -14,8 +14,11 @@ const cookies = require('cookie-parser');
 const mainRouter = require('./routes/main');
 
 const productRoutes= require('./routes/productRoutes');
-
 const usersRoutes = require('./routes/users');
+//Aquí llamo a la ruta de las api de productos
+const apiProductsRouter = require('./routes/api/products')
+//Aquí llamo a la ruta de las api de usuarios
+const apiUsersRouter = require('./routes/api/users')
 
 //const productsList= require('./routes/productRoutes');
 
@@ -40,10 +43,12 @@ app.use(express.urlencoded({ extended: false }));
 //rutas
 
 app.use('/', mainRouter)
-
 app.use('/products', productRoutes)
-
 app.use('/user', usersRoutes)
+
+app.use('/api/products',apiProductsRouter);
+
+app.use('/api/users',apiUsersRouter);
 
 //app.use('/productDetail', productRoutes)
 //app.use('/productCart', productCartRoutes)

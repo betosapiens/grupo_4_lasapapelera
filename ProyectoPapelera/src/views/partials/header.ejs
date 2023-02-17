@@ -16,13 +16,13 @@
         </div>
 
         <div class="login-icono">
-          <a href="/productDetail">
+          <a href="/products">
             <i class="fa-solid fa-shop"></i>
           </a>
         </div>
         
         <div class="login-icono">
-          <a href="/products">
+         
           <i id="burguer" class="fas fa-bars"></i>
         </div>
 <!-- 
@@ -31,16 +31,17 @@
             <i class="fa-duotone fa-cart-shopping-fast"></i>
         </a>
         </div> -->
-
+        <h3 class="hola">Hola <%= locals.userLogged.firstName%></h3>
         <a>
-        <img src="/images/users/<%= locals.userLogged.avatar %>" width="100" style="border-radius: 100%;">
+        <img src="/images/users/<%= locals.userLogged.avatar %>" width="50" style="border-radius: 100%;">
         </a>
-        <h3>Hola <%= locals.userLogged.first_name%></h3>
+   
 
         <div class="logout">
-          <a href="/user/logout">
-          <i class="fa-solid fa-right-from-bracket"></i>
           <p>Logout</p>
+          <a href="/user/logout">
+          <i class="fa-solid fa-right-from-bracket" width="50" ></i>
+          
         </a>
         </div>
        

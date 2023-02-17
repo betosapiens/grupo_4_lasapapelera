@@ -100,5 +100,17 @@
   "description": "Cinta Rapifix Transparente 12x30 C/U",
   "price": 75,
   "image": "1676229004302_img.jpg"
+ },
+ {
+  "name": "Caja de cuadernos",
+  "description": "Caja para cuadernos",
+  "price": 1000,
+  "image": "1676337643461_img.jpg"
+ },
+ {
+  "name": "Bolsa KP10",
+  "description": "Bolsa de tamaño 10, de diversos colores",
+  "price": 340,
+  "image": "1676489580447_img.jpg"
  }
 ]

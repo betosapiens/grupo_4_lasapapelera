@@ -4,7 +4,6 @@ const path = require("path")
 const { body } = require("express-validator")
 const loginController= require('../controllers/loginController')
 const usersControllers = require('../controllers/usersControllers')
-const usersAPIControllers = require('../controllers/usersAPIControllers')
 
 const { validateHeaderValue } = require("http")
 const uploadFile = require('../middlewares/multerMiddleware')
@@ -41,14 +40,7 @@ return true;
 })
 ]
 
- //Api
-/*router.get('/:id', usersAPIControllers.show)
-router.get('/', usersAPIControllers.list)
-router.get('/search', usersAPIControllers.search);
-//router.get('/detail/:id', productAPIControllers.detail)
-router.post('/', usersAPIControllers.create);
-router.post('/', usersAPIControllers.update);
-router.delete('/:id', usersAPIControllers.destroy);*/
+
 
 
 //Formulario de registro
