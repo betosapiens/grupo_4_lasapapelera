@@ -92,7 +92,7 @@ const usersAPIControllers = {
             lastName: req.body.lastName,
             email: req.body.email,
             password: req.body.password,
-            image: req.body.image
+            image: req.body.filename
         })
         .then(user => {
             let respuesta = {

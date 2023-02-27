@@ -116,7 +116,7 @@ const productsAPIControllers = {
         db.Product.update({
             name: req.body.name,
             description: req.body.description,
-            price: req.body.price,
+            price: Number(req.body.price),
             image: req.body.image,
             categoryId: req.body.categoryId
         }, {

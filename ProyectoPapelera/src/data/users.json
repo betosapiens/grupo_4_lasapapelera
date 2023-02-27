@@ -127,5 +127,29 @@
   "email": "leo10@gmail.com",
   "password": "$2a$10$Lk1VpQqGXMPwNL8ganwGMOZQ0n1DThidq84ZOz.uk8K22EQsYTqR6",
   "avatar": "1676158707925_img.jpg"
+ },
+ {
+  "id": 17,
+  "firstName": "Manu",
+  "lastName": "Ginobili",
+  "email": "manu@gmail.com",
+  "password": "$2a$10$eFI67.euUprmIftbDsDDIe1KrnRH3g2L2I1I0xjVjIt0Dq0O0RBii",
+  "avatar": "1677425083319_img.jpg"
+ },
+ {
+  "id": 18,
+  "firstName": "Emiliano",
+  "lastName": "Martinez",
+  "email": "dibu@gmail.com",
+  "password": "$2a$10$8OZgpLcsot1cmWDXHFeohO6VF91eK.wWmFeJiVOen3jYVP.c2ep5C",
+  "avatar": "1677425156276_img.jpg"
+ },
+ {
+  "id": 19,
+  "firstName": "Keira",
+  "lastName": "Knightley",
+  "email": "keira@gmail.com",
+  "password": "$2a$10$dfRhpMAhw3JwcCRFoClVzOeQSuzK/WYwz67cO2zctfSY0iXQPZPEu",
+  "avatar": "1677425284825_img.jpg"
  }
 ]

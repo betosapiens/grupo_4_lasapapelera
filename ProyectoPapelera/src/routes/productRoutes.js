@@ -17,7 +17,7 @@ router.get('/edit/:id', productControllers.edit);
 router.post('/edit/:id', uploadFile.single("image"), productControllers.update)
 
 //Rutas de eliminación de productos
-router.get('/delete/:id', productControllers.delete);
+router.get('/delete/:id', productControllers.destroy);
 router.delete('/delete/:id', productControllers.destroy);
 
 module.exports= router

@@ -45,11 +45,11 @@ return true;
 
 //Formulario de registro
 router.get('/register', guestMiddleware, usersControllers.index);
-router.get('/edit/:id', guestMiddleware, usersControllers.edit);
-router.post('/edit/:id', guestMiddleware, usersControllers.update);
+//router.get('/edit/:id', guestMiddleware, usersControllers.edit);
+//router.post('/edit/:id', guestMiddleware, usersControllers.update);
 
-router.get('/register', guestMiddleware, usersControllers.register);
-router.post('/register', uploadFile.single("avatar"),validations, usersControllers.processRegister);
+//router.get('/register', guestMiddleware, usersControllers.register);
+//router.post('/register', uploadFile.single("avatar"),validations, usersControllers.processRegister);
 
 //Proceso de registro
 router.post('/register', uploadFile.single("avatar"), usersControllers.store);

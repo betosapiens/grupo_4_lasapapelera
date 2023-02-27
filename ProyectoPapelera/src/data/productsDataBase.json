@@ -112,5 +112,35 @@
   "description": "Bolsa de tamaño 10, de diversos colores",
   "price": 340,
   "image": "1676489580447_img.jpg"
+ },
+ {
+  "name": "Cajas de Cartón 42x25x25",
+  "description": "Cajas de Cartón medida",
+  "price": 1000,
+  "image": "1677425426736_img.jpg"
+ },
+ {
+  "name": "Cajas de Cartón 60x40x20",
+  "description": "Cajas de Cartón Medida 60x40x20 por Unidad",
+  "price": 100,
+  "image": "1677425500538_img.jpg"
+ },
+ {
+  "name": "Servilletas",
+  "description": "Servilletas de Papel",
+  "price": 100,
+  "image": "1677425618437_img.jpg"
+ },
+ {
+  "name": "Vaso Plástico Rígido 500Cc",
+  "description": "Vaso Plástico Rígido 500Cc x100 Unidades",
+  "price": 4000,
+  "image": "1677452978464_img.jpg"
+ },
+ {
+  "name": "Plato Cuadrado",
+  "description": "Plato cuadrado de plástico de varios colores (violeta, rojo, azul, blanco)",
+  "price": 50,
+  "image": "1677453081232_img.jpg"
  }
 ]

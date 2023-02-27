@@ -75,9 +75,8 @@ store: (req, res) => {
                 name: req.body.name,
                 description: req.body.description,
                 price: Number(req.body.price), 
-                discount: req.body.descuento,
                 image : req.file.filename,
-                categoryId : req.body.categoria 
+                categoryId : req.body.categoria
             }
             products.push(_body);
             //console.log(nuevoProducto)
@@ -140,33 +139,36 @@ store: (req, res) => {
             //res.redirect('products');
       
         },
-        delete: (req, res) => {
+       delete: (req, res) => {
        
-            const id = req.params.id;
-            const product = products.find(product => product.id == id);
-            res.render('productDelete', { product });
-    },
-        
+           const id = req.params.id;
+           const product = products.find(product => product.id == id);
+            res.render('productDelete');
+ },
 
-        destroy: (req, res) => {
-            
-            const id = req.params.id;
-            const product = products.find(product => product.id == id);
-            //Obtenemos el índice del producto que queremos eliminar
-            const index = products.indexOf(product);
-            //Eliminamos el producto del array
-            products.splice(index, 1);
-            //Escribimos el nuevo array de productos en el archivo JSON
-            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-            //Redirigimos al usuario a la lista de productos
-            Product.destroy({
-                where: {
-                    id : req.params.id
-                }
-            })
-            .then(()=>  res.redirect('/products'))
-            .catch(error => res.send(error))
-        }
+
+
+    destroy: (req, res) => {
+        
+        //const id = req.params.id;
+        //const product = products.find(product => product.id == id);
+        //Obtenemos el índice del producto que queremos eliminar
+        //const index = products.indexOf(product);
+        //Eliminamos el producto del array
+        //products.splice(index, 1);
+        //Escribimos el nuevo array de productos en el archivo JSON
+        //fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+        //Redirigimos al usuario a la lista de productos
     
-    }
+           Product.destroy({
+              where: {
+                   id : req.params.id
+            }
+             })
+            .then(()=>  res.redirect('products'))
+        .catch(error => res.send(error))
+         }
+}
+
+    
 module.exports= Controllers
