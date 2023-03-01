@@ -5,6 +5,8 @@ import GenresInDb from './GenresInDb';
 import LastMovieInDb from './LastProductInDb';
 import ContentRowMovies from './ContentRowProducts';
 import Total from './Total';
+import ProductosEnDb from './Productos';
+import UsuariosEnDb from './Usuarios';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
 
@@ -41,7 +43,7 @@ function SideBar(){
                 <li className="nav-item">
                 <Link className="nav-link" to="/GenresInDb">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Página de Listado de Productos</span>
                     </Link>
                 </li>
 
@@ -49,14 +51,36 @@ function SideBar(){
                 <li className="nav-item">
                     <Link className="nav-link" to="/LastProductInDb">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+                        <span>Último Producto</span></Link>
                 </li>
+
+                   {/*<!-- Nav Item - Charts -->*/}
+                   <li className="nav-item">
+                    <Link className="nav-link" to="/Productos">
+                        <i className="fas fa-fw fa-chart-area"></i>
+                        <span> Productos</span></Link>
+                </li>
+
+     {/*<!-- Nav Item - Charts -->*/}
+     <li className="nav-item">
+                    <Link className="nav-link" to="/Usuarios">
+                        <i className="fas fa-fw fa-chart-area"></i>
+                        <span> Usuarios</span></Link>
+                </li>
+
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
                 <Link className="nav-link" to="/ContentRowProducts">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
+                        <span>Tablas de Productos</span></Link>
+                </li>
+
+                   {/*<!-- Nav Item - Tables -->*/}
+                   <li className="nav-item nav-link">
+                <Link className="nav-link" to="/Total">
+                        <i className="fas fa-fw fa-table"></i>
+                        <span>Tablas</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -92,6 +116,12 @@ function SideBar(){
                 </Route>
                 <Route path="/ContentRowProducts">
                     <ContentRowMovies />
+                </Route>
+                <Route path="/Productos">
+                    <ProductosEnDb />
+                </Route>
+                <Route path="/Usuarios">
+                    <UsuariosEnDb />
                 </Route>
                 <Route path="/Total">
                     <Total />

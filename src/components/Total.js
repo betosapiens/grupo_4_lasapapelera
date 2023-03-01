@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { useState, useEffect } from "react";
 
 function Total() {
@@ -7,7 +6,7 @@ function Total() {
   const [totalUsuarios, setTotalUsuarios] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3032/api/products")
+    fetch("api/products")
       .then((response) => response.json())
       .then((data) => {
         setTotalProductos(data);
@@ -16,24 +15,26 @@ function Total() {
   }, []);
   
   useEffect(() => {
-    fetch("http://localhost:3032/api/users")
+    fetch("api/users")
       .then((response) => response.json())
       .then((data) => {
         setTotalUsuarios(data);
       })
       .catch((error) => console.log("Errores:" + error));
   }, []);
-  
+
+
   return (
     <>
     <h1>Total:</h1>
-    <div className="content-TotalProductos">
+    <div className="content-TotalProducts">
       <h2>TOTAL PRODUCTOS: {totalProductos.total}</h2>
       <h2>TOTAL USUARIOS: {totalUsuarios.total}</h2>
       <h2>TOTAL CATEGORIAS: {totalProductos.totalCategorias}</h2>
     </div>
     </>
   );
+  
 }
 
 export default Total;

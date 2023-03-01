@@ -5,10 +5,10 @@ import SmallCard from './SmallCard';
 
 /* <!-- Products in DB --> */
 
-let productosInDB = {
-    title: 'Productos en Base de Datos',
+let UsersInDB = {
+    title: 'Usuarios en Base de Datos',
     color: 'primary', 
-    cuantity: 8,
+    cuantity: 21,
     icon: 'fa-clipboard-list'
 }
 
@@ -16,26 +16,19 @@ let productosInDB = {
 
 /* <!-- Total awards --> */
 
-let totalDeProductos = {
-    title:' Total de productos', 
+let totalDeUsuarios = {
+    title:' Total de usuarios', 
     color:'success', 
-    cuantity: '20',
+    cuantity: '79',
     icon:'fa-award'
-  
-
 }
 
 /* <!-- Actors quantity --> */
 
-let CategoriasDeProductos = {
-    title:'Categorias de productos' ,
-    color:'warning',
-    cuantity:'4',
-    icon:'fa-user-check'
-}
-let cartProps = [productosInDB, totalDeProductos, CategoriasDeProductos];
 
-function ContentRowProducts(){
+let cartProps = [UsersInDB, totalDeUsuarios];
+
+function ContentRowUsers(){
     return (
     
         <div className="row">
@@ -50,4 +43,4 @@ function ContentRowProducts(){
     )
 }
 
-export default ContentRowProducts;
+export default ContentRowUsers;
