@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head') %>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link href="/css/styles.css" rel="stylesheet" />
+<link href="/css/normalize.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 
 <%- include('./partials/header') %>
 
   <body>
     <section class="banner">
-      <img class="banner" src="images/banner2.jpg" alt="banner" />
+      <div class="slider-wrapper">
+
+        <figure class="slider" id="slider">
+          <img id="slide-1" class="img-banner-01" src="images/banner2.jpg" alt="banner" />
+          <img id="slide-2" class="img-banner-02" src="images/banner1.jpg" alt="banner" />
+          <img id="slide-1" class="img-banner-01" src="images/banner2.jpg" alt="banner" />
+        </figure>
+
+      </div>
     </section>
 
-
-    <section  class="nosotros">
+    <section class="nosotros">
       <h1>Nosotros</h1>
       <p>
         Somos una empresa familiar fundada hace 60 años en Ringuelet, La Plata.
@@ -21,24 +36,20 @@
         tercera generación.
       </p>
     </section>
-   <div class="productos">
-    <% products.forEach(product => { %> 
-
-      <div>
-        <article class="articulos">
-         <!-- /* <a href="/products/detail/<%= products.id %>">       */  -->
-            <div class="titulares">
-              <p><%= product.name %></p>
-
-            </div>
-            <img src="/images/<%= product.image %>" alt="bolsas" class="imagenes" />
-          </a>
-        </article>
-      </div>
-
-    <% }) %>
-   </div>
     
+    <section class="productos">
+      <% products.forEach(product=> { %>        
+          <article class="articulos">
+            <!-- <a href="/products/detail/<%= products.id %>">            -->
+              <h2 class="titulares">
+                <%= product.name %>
+              </h2>            
+              <img src="/images/<%= product.image %>" alt="bolsas" class="imagenes" />
+            </a>
+          </article>
+        <% }) %>
+      </section>
+
 
   </body>
   <%- include('./partials/footer') %>

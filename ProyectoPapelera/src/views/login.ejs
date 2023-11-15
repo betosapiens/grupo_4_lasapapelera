@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head') %>
+<link rel="stylesheet" href="/css/stylesRegistrateLogin.css">
 
-    <link rel="stylesheet" href="/css/stylesRegistrateLogin.css">
 
-    <body>
-        <%- include('./partials/header') %>
+<%- include('./partials/header') %>
 
+<body>
+
+        <section class="form-container">
+            
             <form action="/user/login" method="POST" class="create-form">
                 <div class="formulario-de-registro">
                     <h5 class="titulo-form">Acceder a tu cuenta</h5>
                     <p class="parrafo-form">De esta forma podes hacer pedidos y visitar todo nuestro catálogo</p>
                 </div>
+
                 <div class="control-formulario">
                     <label>Email<span>*</span></label>
                     <input type="text" name="email" class="control">
@@ -20,33 +23,33 @@
                             <%= errors.email.msg %>
                         </div>
                     <% } %>
-                   
                 </div>
+
                 <div class="control-formulario">
                     <label>Contraseña<span>*</span></label>
                     <input type="password" name="password" maxlenght="20" class="control">
                 </div>
-                <div>
-                    <div>
-                        <div>
-                            <button type="submit" name="boton-formulario" class="boton-formulario">Acceder</button>
-                        </div>
-                        <div class="form-group form-check">
-                            <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
-                            </label>
-                        </div>
-                        <div>
-                            <a class="registrate" href="/user/register">Registrate</a>
-                        </div>
-                        <div>
-                            <a class="olvidaste" href="cuenta-olvida-pass.php">¿Olvidaste tu contraseña?</a>
-                        </div>
-                    </div>
-                    </div>
-            </form>
 
-            <%- include('./partials/footer') %>
+                <div>                
+                    <head>
+                        <button type="submit" name="boton-formulario" class="boton-formulario">Acceder</button>
+                    </head>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+                        </label>
+                    </div>
+
+                    <footer class="footer-form">
+                        <a class="registrate" href="/user/register">Registrate</a>
+
+                        <a class="olvidaste" href="cuenta-olvida-pass.php">¿Olvidaste tu contraseña?</a>
+                    </footer>                
+                </div>
+                
+            </form>
+        </section>
+        <%- include('./partials/footer') %>
         </body>
 
 </html>

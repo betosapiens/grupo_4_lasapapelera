@@ -50,7 +50,7 @@ app.use('/api/products',apiProductsRouter);
 
 app.use('/api/users',apiUsersRouter);
 
-//app.use('/productDetail', productRoutes)
+// app.use('/productDetail', productRoutes)
 //app.use('/productCart', productCartRoutes)
 //app.use('/productEdit',productRoutes)
 
